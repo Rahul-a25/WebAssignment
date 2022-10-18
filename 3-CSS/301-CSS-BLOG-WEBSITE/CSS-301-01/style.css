@@ -1,1 +1,33 @@
-/* start your css here */
+body{
+    background-color: gray;
+  }
+    .maindiv{
+      margin: 200px auto;
+      width: 750px;
+      height: 1350px;
+      background-color: whitesmoke;
+
+    }
+    
+    .h2{
+      margin-top:100px ;
+      text-align: center;
+    }
+    #img{
+     text-align: center;
+     margin-left: 80px;
+
+    }
+    .p1{
+      text-align: justify;
+      margin-left: 20px;
+      margin-left: 74px;
+     
+     
+    }
+    .second{
+      margin: 100px auto;
+    }
+    #vid{
+      margin-left: 80px;
+    }

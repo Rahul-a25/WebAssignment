@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            margin: 100px auto;
+            border: 2px solid gray;
+            box-shadow: 0px 0px 10px 0px;
+            width: 500px;
+            height: 500px;
+
+        }
+    </style>
+</head>
+<body onload="body()">
+    <div class="main" >
+        <img id="img" src="https://tse1.mm.bing.net/th?id=OIP.uSYPQWFlFLMA8mUSWfZlAwHaEK&pid=Api&P=0" alt=""
+        n width="400px" height="400px" >
+    </div>
+
+
+    <script>
+        function body(){
+            setInterval ( function()
+            {
+          var imgref=   document.getElementById("img");
+          if(imgref.src="https://tse1.mm.bing.net/th?id=OIP.uSYPQWFlFLMA8mUSWfZlAwHaEK&pid=Api&P=0"){
+            imgref.src="https://tse3.mm.bing.net/th?id=OIP.JUGCEV0Yh4Acb55JTvMXmwAAAA&pid=Api&P=0";}
+            elseif(imgref.src="https://tse3.mm.bing.net/th?id=OIP.JUGCEV0Yh4Acb55JTvMXmwAAAA&pid=Api&P=0");{
+                imgref.src="https://tse3.mm.bing.net/th?id=OIP.fRps41X7J9k5AlmzMTX8ZwHaHa&pid=Api&P=0";
+            }
+            elseif(imgref.src="https://tse3.mm.bing.net/th?id=OIP.JUGCEV0Yh4Acb55JTvMXmwAAAA&pid=Api&P=0");
+            {
+                imgref.src="https://tse3.mm.bing.net/th?id=OIP.fRps41X7J9k5AlmzMTX8ZwHaHa&pid=Api&P=0";
+            }
+
+            elseif(imgref.src="https://tse3.mm.bing.net/th?id=OIP.JUGCEV0Yh4Acb55JTvMXmwAAAA&pid=Api&P=0");
+            {
+                imgref.src="https://freesvg.org/img/js_logo.png";
+            }
+          
+//            else {
+//             imgref.src="https://tse1.mm.bing.net/th?id=OIP.uSYPQWFlFLMA8mUSWfZlAwHaEK&pid=Api&P=0";
+// }
+            },2000 );
+        }
+    </script>
+</body>
+</html>
