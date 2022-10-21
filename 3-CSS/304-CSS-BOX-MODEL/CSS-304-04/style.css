@@ -1,0 +1,38 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+li{
+    list-style-type: none;
+    margin: 30px;
+    color: aliceblue;
+    opacity: 0.5;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    width: 70%;
+ 
+   
+}
+.nav-iteams{
+    display: flex;
+ 
+    
+}
+i{
+    margin: 20px;
+    display: flex;
+   margin-top: 20px;
+   color: aliceblue;
+
+}
+.logo{
+    color: aliceblue;
+    size: 50px;
+}
+.il{
+    display: flex;
+   align-content: center;
+}
