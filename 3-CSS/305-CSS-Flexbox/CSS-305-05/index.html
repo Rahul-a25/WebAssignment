@@ -5,8 +5,177 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        .first{
+            width: 30%;
+            height: 800px;
+            background-color: rgb(224, 236, 241);
+            display: flex;
+            flex-direction: column;
+
+        }
+        .second{
+            width: 70%;
+            height: 800px;
+            background-color: brown;
+            background-color: rgb(201, 226, 236)
+        }
+        .mainflex{
+            display: flex;
+            
+        }
+        .img{
+            margin-left: 100px;
+        }
+        img{
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        p{
+            font-size: 16px;
+        }
+        .fa-regular{
+            width: 100px;
+            height: 100px;
+        }
+        h3{
+            margin-left: 110px;
+        }
+        .same{
+            padding: 30px;
+        }
+        .same1{
+            margin-left: 80px;
+        }
+        
+        h2{
+            margin-left: 150px;
+            font-size: 35px;
+        }
+        #inp{
+            margin-left: 150px;
+            width: 250px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+        }
+        .firstbox{
+            display: flex;
+            justify-content: space-between;
+            
+           
+        }
+        .secondbox{
+            display: flex;
+            justify-content: space-between;
+           
+        }
+        .thirdbox{
+            display: flex;
+            justify-content: space-between;
+           
+        }
+        .secondmain{
+            margin-top: 70px;
+        }
+        .samebox{
+            margin: 50px auto;
+            background-color: rgb(224, 236, 241);
+            width: 70%;
+            height: 135px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 0px 10px gray;
+        }
+        .imgSame{
+            margin-left: 30px;
+            border-radius: 30px;
+        }
+        #inputsame{
+            border-radius: 20px;
+            border: none;
+            width: 200px;
+            background-color: green;
+            
+        }
+        .numbersame{
+            margin-right: 30px;
+        }
+
+    </style>
 </head>
 <body>
-    <!-- start your code here -->
+<div class="mainflex">
+    <div class="first">
+        <div class="img"> <img width="100px" height="100px" src="https://images.unsplash.com/photo-1619533394727-57d522857f89?ixlib=rb-4.0
+            .3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZWwlMjBtYW58ZW58MHx8MHx8&w=1000&q=80" alt="">
+            <p>Simo Edwin</p>
+            <p class="p">Pro Member</p>
+         </div>
+        <div class="stream">
+            <i class="fa-light fa-screencast same"></i>
+            <h3>Streams</h3>
+        </div>
+        <div class="games">
+            <i class="fa-light fa-screencast same"></i>
+            <h3>Games</h3>
+        </div>
+        <div class="new">
+            <i class="fa-light fa-screencast same"></i>
+            <h3>New</h3>
+        </div>
+        <div class="library">
+            <i class="fa-light fa-screencast same"></i>
+            <h3>Library</h3>
+        </div>
+        <div class="last"></div>
+    </div>
+    <div class="second">
+        <div class="secondmain">
+            <div class="active">
+            <h2>Active games</h2>
+            <input type="text" id="inp">
+           </div>
+                 
+            <div class="thirdbox samebox">
+                <div class="boxing">
+                    <img class="imgSame" width="100px" height="100px" src="https://www.newsshare.in/wp-content/uploads/7/Video-Games-Wallpaper-1920x1080-61557.jpg"
+                     alt="">
+                 </div>
+                 <div class="content">
+                    <h3>Asassins Creed  Valhalla <br>
+                        <p>Ps5 Version</p> 
+                       <input type="text" id="inputsame"></h3>
+                 </div><br>
+                 <div class="numbersame"><p>60%</p></div>
+             </div>
+                 <div class="secondbox samebox">
+                    <div class="boxing">
+                        <img class="imgSame" width="100px" height="100px" src="https://www.newsshare.in/wp-content/uploads/7/Video-Games-Wallpaper-1920x1080-61557.jpg"
+                         alt="">
+                     </div>
+                     <div class="content">
+                        <h3>Asassins Creed  Valhalla <br>
+                            <p>Ps5 Version</p> 
+                           <input type="text" id="inputsame"></h3>
+                     </div><br>
+                     <div class="numbersame"><p>60%</p></div>
+                 </div>
+                 <div class="thirdbox samebox">
+                    <div class="boxing">
+                        <img class="imgSame" width="100px" height="100px" src="https://www.newsshare.in/wp-content/uploads/7/Video-Games-Wallpaper-1920x1080-61557.jpg"
+                         alt="">
+                     </div>
+                     <div class="content">
+                        <h3>Asassins Creed  Valhalla <br>
+                            <p>Ps5 Version</p> 
+                           <input type="text" id="inputsame"></h3>
+                     </div><br>
+                     <div class="numbersame"><p>60%</p></div>
+                 </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
