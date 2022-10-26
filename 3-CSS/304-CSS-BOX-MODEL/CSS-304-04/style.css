@@ -32,7 +32,10 @@ i{
     color: aliceblue;
     size: 50px;
 }
-.il{
+.i1{
     display: flex;
    align-content: center;
+}
+.fas{
+    margin-top: 35px;
 }
