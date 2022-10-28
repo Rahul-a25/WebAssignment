@@ -1,1 +1,93 @@
-/* start your styling here  */
+body{
+    background-color: black;
+  }
+    .maindiv{
+      padding: 5px;
+      border: none;
+      width: 600px;
+      height: 450px;
+      margin:100px auto;
+      background-color: #4343a7;
+    }
+    .secondmaindiv{
+      width: 400px;
+      height: 360px;
+      margin: 40px auto;
+      border-radius: 8px ;
+      background-color: rgb(244, 125, 112);
+    }
+    .div1{
+      display: flex;
+      justify-content: space-between;
+      padding: 17px;
+    }
+    .div2{
+      display: flex;
+      justify-content: space-between;
+      padding: 17px;
+    }
+    .div3{
+      display: flex;
+      justify-content: space-between;
+      padding: 17px;
+    }
+    .div4{
+      display: flex;
+      justify-content: space-between;
+      padding: 17px;
+    }
+    .div5{
+      display: flex;
+      justify-content: space-between;
+      padding: 17px;
+    }
+    .c{
+      padding: 10px;
+      width: 65px;
+      box-shadow: 0px 2px 10px hsl(60, 78%, 52%);
+      background-color: hsl(60, 78%, 52%);
+      color: black;
+      border: none;
+      border-radius: 4px;
+    }
+    .inp{
+      width: 260px;
+      height: 34px;
+      border-radius: 5px;
+      background-color: #3b3bb9;
+      color: white;
+    }
+    .div2{
+      display: flex;
+      justify-content: space-between;
+      padding: 17px;
+    }
+    .same{
+      padding: 10px;
+      width: 75px;
+      box-shadow: 0px 3px 10px hsl(60, 78%, 52%);
+      background-color: hsl(60, 78%, 52%);
+      color: black;
+      border: none;
+      border-radius: 5px;
+    }
+    .size{
+      width: 70px;
+    }
+    .green{
+      background-color: #36f536;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0px 3px 10px black;
+    }
+    .yellow{
+      background-color:hsl(60, 78%, 52%); 
+      border: none;
+      border-radius: 5px;
+      box-shadow:0px 3px 10px hsl(60, 78%, 52%); ;
+    }
+    .blue{
+      background-color: #3b3bb9;
+      color: white;
+      box-shadow: 0px 3px 10px black;
+    }
