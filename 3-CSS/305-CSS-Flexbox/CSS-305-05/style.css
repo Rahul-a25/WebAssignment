@@ -1,1 +1,159 @@
-/* start your styling here  */
+.first{
+    width: 30%;
+    height: 800px;
+    background-color: rgb(159, 214, 238);
+    display: flex;
+    flex-direction: column;
+
+}
+.second{
+    width: 70%;
+    height: 800px;
+    /* background-color: brown; */
+    background-color: rgb(68, 196, 247)
+}
+.mainflex{
+    display: flex;
+    
+}
+.img{
+    margin-left: 100px;
+}
+img{
+    border-radius: 50%;
+    margin-top: 20px;
+}
+p{
+    font-size: 16px;
+}
+.fa-regular{
+    width: 100px;
+    height: 100px;
+}
+h3{
+    margin-left: 0px;
+    
+}
+.fb{
+    font-size: 23px;
+    margin-right: 154px;
+}
+.last{
+    display: flex;
+    justify-content: space-betweenS;
+    margin-right:10px ;
+    background-color: rgb(68, 196, 247);
+    border-radius: 50px;
+    margin-top:  30px;
+    width: 400px;
+    height: 160px;
+    margin-bottom: 20px;
+
+}
+.lastcontent{
+    text-align: center;
+    margin: auto;
+    padding: 25px;
+    font-size: 30px;
+    color: whitesmoke;
+    
+}
+.lastfirstimg{
+    margin-top: 40px;
+    margin-right: 50px;
+}
+.same{
+    padding: 30px;
+}
+.same1{
+    margin-left: 80px;
+}
+
+h2{
+    margin-left: 150px;
+    font-size: 35px;
+}
+#inp{
+    margin-left: 150px;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+.firstbox{
+    display: flex;
+    justify-content: space-between;
+    
+   
+}
+.secondbox{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.thirdbox{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.secondmain{
+    margin-top: 70px;
+}
+.samebox{
+    margin: 50px auto;
+    background-color: rgb(224, 236, 241);
+    width: 70%;
+    height: 135px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 10px gray;
+}
+.imgSame{
+    margin-left: 30px;
+    border-radius: 30px;
+}
+#inputsame{
+    border-radius: 20px;
+    border: none;
+    width: 200px;
+    background-color: rgb(9, 177, 243);
+    
+}
+.numbersame{
+    margin-right: 30px;
+}
+.stream{
+    display: flex;
+    margin: auto 38px;
+    
+}
+.games{
+    display: flex;
+    margin: auto 38px;
+}
+.new{
+    display: flex;
+    margin: auto 38px;
+}
+.library{
+    display: flex;
+    margin: auto 38px;
+}
+.icons{
+    padding: 30px;
+    font-size: 31px;
+}
+#newcontent{
+   margin-top: 32px;
+   font-size: 23px;
+}
+.fa-gamepad{
+    margin-top: 3px;
+    padding: 30px;
+    font-size: 31px;
+}
+.fa-book-atlas{
+    margin-top: 3px;
+    padding: 30px;
+    font-size: 31px;
+}
