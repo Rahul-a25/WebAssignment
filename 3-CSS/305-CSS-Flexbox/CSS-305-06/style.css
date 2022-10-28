@@ -1,1 +1,94 @@
-/* start your styling here  */
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
+.discover{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 1
+}
+.linkedin{
+    display: flex;
+
+}
+.linkedin h2{
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(57, 57, 187);
+}
+.linkedinimg{
+    margin: 28px 0px;
+}
+.same{
+    padding: 30px ;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sect{
+    margin: -30px;
+}
+.sameicon{
+    text-align: center;
+}
+.vrline{
+    margin-top: 26px;
+    border: 1px solid black;
+    height: 40px;
+}
+li .btn{
+    width: 100px;
+    padding: 12px;
+    border-radius: 40px;
+    margin-top: 22px;
+    border:2px solid blue;
+    background-color: white;
+    color: blue;
+}
+.join{
+    margin-top: 6px;
+    
+}
+.secondsection{
+    display: flex;
+    margin-left: 140px;
+}
+.joincontent{
+    font-size: 50px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.btnwala{
+    font-size: 20px;
+}
+.line1{
+    width: 200px;
+    margin-top: 22px;
+    margin-right: 10px;
+    height: 0px;
+    border: 1px solid gray;
+   
+}
+.line2{
+    width: 200px;
+    margin-top: 22px;
+    height: 0px;
+    border: 1px solid gray;
+    margin-left: 10px;
+}
+.linewala{
+    display: flex;
+}
+.already{
+    display: flex;
+}
+.on{
+    margin: auto;
+}
+.colorblue{
+    color: blue;
+}

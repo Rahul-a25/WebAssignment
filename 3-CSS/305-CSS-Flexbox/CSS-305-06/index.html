@@ -6,108 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <style>
-        .navbar{
-            display: flex;
-            justify-content: space-around;
-        }
-        .discover{
-            display: flex;
-            justify-content: space-around;
-            list-style-type: none;
-            padding: 1
-        }
-        .linkedin{
-            display: flex;
-
-        }
-        .linkedin h2{
-            font-size: 32px;
-            font-weight: bold;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: rgb(57, 57, 187);
-        }
-        .linkedinimg{
-            margin: 28px 0px;
-        }
-        .same{
-            padding: 30px ;
-            display: flex;
-            flex-direction: column;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        .sect{
-            margin: -30px;
-        }
-        .sameicon{
-            text-align: center;
-        }
-        .vrline{
-            margin-top: 26px;
-            border: 1px solid black;
-            height: 40px;
-        }
-        li .btn{
-            width: 100px;
-            padding: 12px;
-            border-radius: 40px;
-            margin-top: 22px;
-            border:2px solid blue;
-            background-color: white;
-            color: blue;
-        }
-        .join{
-            margin-top: 6px;
-            
-        }
-        .secondsection{
-            display: flex;
-            margin-left: 140px;
-        }
-        .joincontent{
-            font-size: 50px;
-        }
-        .content{
-            display: flex;
-            flex-direction: column;
-        }
-        .btnwala{
-            font-size: 20px;
-        }
-        .line1{
-            width: 200px;
-            margin-top: 22px;
-            margin-right: 10px;
-            height: 0px;
-            border: 1px solid gray;
-           
-        }
-        .line2{
-            width: 200px;
-            margin-top: 22px;
-            height: 0px;
-            border: 1px solid gray;
-            margin-left: 10px;
-        }
-        .linewala{
-            display: flex;
-        }
-        .already{
-            display: flex;
-        }
-        .on{
-            margin: auto;
-        }
-        .colorblue{
-            color: blue;
-        }
-
-
-    </style>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
  <nav class="navbar">
-          <section class="linkedin"><h2>Linked</h2> <img class="linkedinimg" width="30px" height="30px" src="data:image/png;base64,i
+          <section class="linkedin"><h2>Linked</h2> <img style="border-radius: 3px;" class="linkedinimg" width="30px" height="30px" src="data:image/png;base64,i
             VBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEUMZMX///8AYcQAWcFDf8nL3PIAWrzQ3vMAYcI0eclZjtAucslAgsz6/v3x9/sgbclOhM8
             AX8QAYsAAX70AV70AWMLm7vgAXb4sdsw5fsoRbsVmltK6z+iUt+AMZcG
             DrN3c6fNvnddiltWqwuPA0+r0+vyOrt+lweR9pduuyueUst9Lh81pldd1mtYdbcunxOXO4u7Z4fGRyVlRAAAEKUlEQVR4nO3ce1faMBz
@@ -142,15 +45,17 @@
  </nav>
  <div class="secondsection">
        <div class="content">
-          <h1 class="joincontent">Join the biggest <br>Profesional community</h1>
+          <h1 style="color: brown; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-right: 30px;" class="joincontent">Join the biggest <br>Profesional community</h1>
           <input type="email" style="width:400px; padding: 10px; border:2px solid gray; " placeholder="Email"><br>
           <input type="password" style="width:400px; padding: 10px; border:2px solid gray" placeholder="Password (8+ character)">
-          <p>By clicking Agree & Join,you agree to the Linkedin <span class="colorblue">user <br>Agreement Privacy Policy , <span>and</span> Cookies Policy</span></p>
+          <p >By clicking Agree & Join,you agree to the Linkedin <span class="colorblue">user <br>Agreement Privacy Policy , <span>and</span> Cookies Policy</span></p>
           <button style="width: 430px; padding:10px; border-radius: 30px; border: none; background-color: blue; color: whitesmoke;"> <span class="btnwala">Agree & Join</span> </button><br>
           <div class="linewala"> <div class="line1"></div> <p> Or</p><div class="line2"></div> </div><br>
           <div class="already"> <p class="on">Already on Linkedin ? <span class="colorblue" >Signin</span></p></div>
        </div>
-       <div class="img"></div>
+       <div class="img">
+        <img style="margin: 20px 30px;" width="850px" height="600px" src="https://www.lumapps.com/sites/default/files/2020/06/improve-digital-communication-in-the-workplace.jpg" alt="">
+       </div>
  </div>
 </body>
 </html>
