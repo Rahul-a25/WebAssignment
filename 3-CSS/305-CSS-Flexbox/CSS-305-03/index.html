@@ -5,8 +5,142 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        .main{
+            display: flex;
+            height:700px;
+            width: 99%;
+            background-color: gray;
+            border-radius: 15px;
+            margin-left: 8px;
+        }
+        .first{
+            background-color: orange;
+            width:33% ;
+            height: 700px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+           margin: auto;
+        }
+        .second{
+            background-color:rgb(90, 183, 220);
+            width:33% ;
+            height: 700px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+           margin: auto;
+        }
+        .third{
+            background-color: rgb(7, 134, 146);
+            width:34%;
+            height: 700px;
+            border-radius:10px ;
+            display: flex;
+            flex-direction: column;
+           margin: auto;
+        }
+        .icon{
+            margin: 60px 80px;
+            font-size: 40px;
+            color: white;
+        }
+        h1{
+            margin: 20px 80px;
+            font-size: 50px;
+           font-weight: 800;
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           color: white;
+        }
+        p{
+            margin: 60px 80px;
+            font-size: 17px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+          
+        }
+        .btn{
+            margin: 60px 80px;
+           
+        }
+        .mainbtn{
+            padding: 30px;
+            width: 200px;
+            border-radius: 50px;
+            border: none;
+            margin: 0px 0px;
+        }
+        span{
+            font-size: 20px;
+            color: orange;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .secondh1{
+            margin: 30px 80px;
+        }
+        .secondbtn{
+            color:rgb(90, 183, 220) ;
+        }
+        .thirdbtn{
+            color: rgb(7, 134, 146) ;
+        }
+        
+    </style>
 </head>
 <body>
-    <!-- start your code here -->
+    <div class="main">
+
+
+        <div class="first">
+                
+                <div class="icon"><i class="fa-sharp fa-solid fa-car-side"></i></div>
+                <div class="h3content">
+                    <h1>SEDANS</h1>
+                </div>
+                <div class="pcontent">
+                    <p>Choose a sedon for its affordabilility <br> and excellent fuel economy. Ideal for <br>
+                         curising in the city or on your next <br> road trip.
+                    </p>
+                </div>
+                <div class="btn">
+                    <button class="mainbtn"> <span>Learn More</span> </button>
+                </div>
+        </div>
+        <div class="second">
+            <div class="icon"><i class="fa-sharp fa-solid fa-car-side"></i></div>
+            <div >
+                <h1>SUVS</h1>
+            </div>
+            <div class="pcontent">
+                <p>Take an SUV for its spacious interior  <br> power and versatility . Perfect for your <br>
+                     next family vacation and off-road <br> adventures.
+                </p>
+            </div>
+            <div class="btn">
+                <button class="mainbtn"> <span class="secondbtn">Learn More</span> </button>
+            </div>
+        </div>
+    
+        <div class="third">
+
+            <div class="icon"><i class="fa-sharp fa-solid fa-car-side"></i></div>
+            <div class="h3content">
+                <h1>LUXURY</h1>
+            </div>
+            <div class="secondpcontent">
+                <p>Cruise in the best car brands without  <br> the bloated prices.Enjoy the enhanced  <br>
+                     comfort of a luxury rental and arrive in <br> style.
+                </p>
+            </div>
+            <div class="btn">
+                <button class="mainbtn"> <span class="thirdbtn">Learn More</span> </button>
+            </div>
+        </div>
+
+
+
+    </div>
 </body>
 </html>
