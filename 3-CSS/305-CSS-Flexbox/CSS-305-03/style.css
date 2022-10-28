@@ -1,1 +1,79 @@
-/* start your styling here  */
+.main{
+    display: flex;
+    height:700px;
+    width: 99%;
+    background-color: gray;
+    border-radius: 15px;
+    margin-left: 8px;
+}
+.first{
+    background-color: orange;
+    width:33% ;
+    height: 700px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+   margin: auto;
+}
+.second{
+    background-color:rgb(45, 144, 182);
+    width:33% ;
+    height: 700px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+   margin: auto;
+}
+.third{
+    background-color: rgb(6, 71, 77);
+    width:34%;
+    height: 700px;
+    border-radius:10px ;
+    display: flex;
+    flex-direction: column;
+   margin: auto;
+}
+.icon{
+    margin: 60px 80px;
+    font-size: 40px;
+    color: white;
+}
+h1{
+    margin: 20px 80px;
+    font-size: 50px;
+   font-weight: 800;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color: white;
+}
+p{
+    margin: 60px 80px;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+  
+}
+.btn{
+    margin: 60px 80px;
+   
+}
+.mainbtn{
+    padding: 30px;
+    width: 200px;
+    border-radius: 50px;
+    border: none;
+    margin: 0px 0px;
+}
+span{
+    font-size: 20px;
+    color: orange;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.secondh1{
+    margin: 30px 80px;
+}
+.secondbtn{
+    color:rgb(90, 183, 220) ;
+}
+.thirdbtn{
+    color: rgb(6, 71, 77) ;
+}
