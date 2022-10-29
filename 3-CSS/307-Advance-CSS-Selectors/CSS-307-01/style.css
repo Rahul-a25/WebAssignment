@@ -1,1 +1,52 @@
-/* start your styling here  */
+.main{
+    height: 250px;
+    width: 400px;
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid black;
+    /* border-radius: 5px; */
+    background-color: black;
+}
+.part1{
+    display: grid ;
+    grid-template-columns: 90% 10%;
+    gap: 4px;
+
+}
+.part2{
+    margin-top: 10px;
+    display: grid ;
+    grid-template-columns: 30% 30% 29% 10%;
+    gap: 4px;
+}
+.part3{
+    margin-top: 10px;
+    display: grid ;
+    grid-template-columns: 30% 30% 29% 10%;
+    gap: 4px;
+}
+
+.part4{
+    margin-top: 10px;
+    display: grid ;
+    grid-template-columns: 30% 30% 29% 10%;
+    gap: 4px;
+}
+.last{
+    margin-top: 10px;
+    display: grid ;
+    grid-template-columns: 30% 30% 29% 10%;
+    gap: 4px;
+}
+button{
+    padding: 10px;
+ background-color: rgb(145, 34, 210);
+ border-radius: 5px;
+}
+input{
+    border-radius: 3px;
+    background-color: azure;
+}
+.red{
+    background-color: orangered;
+}
