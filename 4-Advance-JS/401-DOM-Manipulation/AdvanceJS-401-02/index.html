@@ -5,8 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .same{
+    display: flex;
+    flex-direction: column;
+  height: 50px;
+  width: 200px;
+  border:2px solid black;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+    </style>
   </head>
   <body>
-    Start your code here
-  </body>
+    <div class="main">
+   <div class="main1 same ">1st child</div>
+   <div class="main2 same">2nd child</div>
+   <div class="main3 same">3rd child</div>
+   <div class="main4 same">4th child</div>
+   <div class="main5 same">5th child</div>
+   <div class="main6 same">6th child</div>
+   <div class="main7 same">7th child</div>
+   <div class="main8 same">8th child</div>
+   <div class="main9 same">9th child</div>
+   <div class="main10 same">10th child</div>
+   <div class="main11 same">11th child</div>
+   <div class="main12 same">12th child</div>
+   <div class="main13 same">13th child</div>
+   <div class="main14 same">14th child</div>
+   <div class="main15 same">15th child</div>
+   <div class="main16 same">16th child</div>
+   <div class="main17 same">17th child</div>
+    </div>
+
+
+
+    <script>
+      var arr=document.getElementsByClassName('same');
+for(var idx=0;idx<arr.length;idx++){
+    if(idx==0){
+        arr[idx].style.backgroundColor="blue";
+    }
+   else if (idx==8){
+    arr[idx].style.backgroundColor="green"
+   }
+   else if(idx==16){
+    arr[idx].style.backgroundColor = "palevioletred";
+   }
+   else if(idx%2==1){
+    arr[idx].style.backgroundColor="lime"
+   }
+   else {
+    arr[idx].style.backgroundColor = "white";
+   }
+}
+    </script>
+   
+</body>
 </html>
+  
