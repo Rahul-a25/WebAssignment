@@ -4,9 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>image</title>
+    <style>
+      .main{
+        display: flex;
+        justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         height: 600px;
+         border: 2px solid black;
+      }
+
+      h1{
+        color: green;
+        font-size: 30px;
+        font-weight: 800;
+
+      }
+      p{
+        font-weight: 800;
+      }
+      #click{
+        width: 600px;
+        height: 200px;
+        border: 1px solid black;
+        margin-top: 30px;
+       
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+    <div class="main">
+      <h1>Geekster</h1>
+    <p>click here to add image element</p>
+    <button style="width: 100px; padding:10px; border-radius:10px ; border: none;" onclick="img()">click</button>
+    <img id="click">
+    </div>
+    
+    <script>
+          function img(){
+    var divref = document.getElementById("click");
+    
+    divref.src = "https://mybigplunge.com/wp-content/uploads/2021/12/Geekster_logo.jpg";
+
+}
+
+
+
+    </script>
   </body>
 </html>
