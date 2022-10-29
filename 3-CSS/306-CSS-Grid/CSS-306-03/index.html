@@ -5,8 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .upernav{
+            background-color: gray;
+            padding: 15px;
+            display: flex;
+
+        }
+        .left{
+            display: flex;
+        }
+        .first{
+            background-color:rgb(59, 58, 58);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin: 0px 5px;
+        }
+        .second{
+            background-color:rgb(59, 58, 58);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin: 0px 5px;
+        }
+        .third{
+            background-color: rgb(59, 58, 58);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin: 0px 5px;
+        }
+        .navbar{
+            margin: 50px 300px;
+        }
+        .navbar ul{
+            display: flex;
+            list-style-type: none;
+            
+            
+        }
+         
+
+        /* this is Grid wala part */
+
+
+        .maindiv{
+            margin: 10px 20px;
+            display: grid;
+            height: 50px;
+            grid-template-columns: 200px 200px 1fr 200px 200px;
+            grid-template-rows: 1fr 1fr 1fr 1fr ;
+            height: 500px;
+
+        }
+        .box1{
+            background-color: red;
+        }
+        .box2{
+            background-color: green;
+            grid-column: 2/4;
+            grid-row: 1/3;
+        }
+        .box3{
+            background-color: yellow;
+            grid-column: 4/6;
+            grid-row: 1/2;
+        }
+        .box4{
+            background-color: violet;
+        }
+        .box5{
+            background-color: saddlebrown;
+            grid-column: 4/6;
+            grid-row: 2/3;
+        }
+        
+        .box6{
+            background-color: goldenrod;
+        }
+        .box7{
+            background-color: hotpink;
+        }
+        .box8{
+            background-color: firebrick;
+            grid-column:3/4 ;
+            grid-row: 3/5;
+        }
+
+    </style>
 </head>
 <body>
-    <!-- start your code here -->
+        <nav class="upernav">
+            <div class="left">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+            </div>
+            <div class="right"></div>
+        </nav>
+
+     <nav class="navbar">
+        <ul >
+            <li style="background-color: black ; border-radius: 5px; color:white; width:120px; text-align:center ;padding:4px; margin: 0px 30px;" class="home">Home</li>
+            <li style="background-color: black ; border-radius: 5px; color:white; width:120px; text-align:center ;padding:4px;  margin: 0px 30px;"  class="about"> About</li>
+            <li style="background-color: black ; border-radius: 5px; color:white; width:120px; text-align:center ;padding:4px;  margin: 0px 30px;"  class="icon"> Icon</li>
+            <li  style="background-color: black ; border-radius: 5px; color:white; width:120px; text-align:center ;padding:4px;  margin: 0px 30px;" class="menu">Menu</li>
+            <li style="background-color: black ; border-radius: 5px; color:white; width:120px; text-align:center ;padding:4px;  margin: 0px 30px;"  class="contact">Contact</li>
+        </ul>
+     </nav>
+
+     <div class="maindiv">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+    </div>
 </body>
 </html>

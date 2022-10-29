@@ -5,8 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+   <style>
+    body
+    {
+      border: 3px solid black;
+      border-radius: 7px;
+    }
+     .main{
+      margin:300px auto;
+    }
+   </style>
+   
   </head>
   <body>
-    Start your code here
+    <div class="main">
+    <input style="margin: auto 600px; border:2px solid green; width: 500px; padding: 10px;" type="text" id="txt" >
+    <p style="margin:15px 780px;" id="value"></p>
+
+  </div>
+
+
+
+
+  <script>
+      var input=(e)=>{
+    var text=document.getElementById('value');
+    var value=(e.target.value);
+      text.innerHTML=value;
+}
+
+
+document.getElementById('txt').addEventListener('input',input);
+  
+  </script>
   </body>
 </html>

@@ -1,159 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>flipkart</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
-<link
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-rel="stylesheet"
-/>
-<!-- Google Fonts -->
-<link
-href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-rel="stylesheet"
-/>
-<!-- MDB -->
-<link
-href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
-rel="stylesheet"
-/>
-<style>
-    nav{
-    display: flex;
-    background-color: blue;
-    color: aliceblue;
-    justify-content: center;
-    padding: 12PX;
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      body{
+      border: 3px solid black;
+   height: 600px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   border-radius: 10px;
+      }
+      input{
+        border: 3px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="txt">
+    <p id="wrote"></p>
+    <script>
+      var input=(e)=>{
+    var text=document.getElementById('wrote');
+    var value=(e.target.value);
+      text.innerHTML=value;
 }
-li{
-    list-style-type: none;
-}
-ul{
-    display: flex;
-    margin: 10px;
-    align-content: center;
-
-}
-li{
-    margin-left: 80px;
-    margin-top: 20px;
-}
-button{
-    background-color: white;
-    border: 1px solid blue;
-    color: blue ;
-    width: 80px;
-    border-radius: 20px;
-
-}
-select{
-    background-color: blue;
-    color: aliceblue;
-    border: 1px solid blue;
-}
-input{
-    width: 400px;
-
-}
-#h{
-    color: gold;
-    text-transform: lowercase;
-}
-img{
-    height: 60px;
-    width: 60px;
-}
-.bodyblock{
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    margin-left: 50px;
-    margin-right: 50px;
-
-}
-.logo{
-    margin-top: 10px;
-}
-</style>
-
-</head>
-<body>
-<nav class="nav">
-    <section class="logo">
-        <h3 style="font-size:22px ;">Flipkart</h3>
-        <h6 id="h" style="color: white; margin: -12px 10px">Explore <span style="color: yellow; margin: -21px 0px;">plus</span> </h6>
-    </section>
-    <section class="naviteams">
-        <ul>
-            <li><input type="text" placeholder="search for product, brands and more  " style="border-radius: 4px; border:none; padding:3px">
-                <i class="fas fa-search"></i> 
-                
-                   
-            </li>
-            <li><button style="width: 110px; padding: 3px; border-radius: 3px; margin-left: -60px;">Login</button></li>
-            <li>Become a seller</li>
-            <li> 
-                <span>More</span>
-                <select name="" id="">
-                   
-                </select>
-            </li>
-            <li><i class="fas fa-cart-arrow-down"></i>
-            Cart</li>
-        </ul>
-    </section>
-</nav>
-<main class="bodyblock">
-    <section class="bodypart">
-        <img src="	https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
-        <h6>Top offer</h6>  
-    </section>
-    <section>
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="">
-        <h6>Grocery</h6>
-    </section>
-    <section>
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100" alt="">
-        <h6>Mobiles</h6>
-    </section>
-    <section>
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100" alt="">
-        <h6>Fashion <select style="border: none; background-color: white; color: black;" name="" id=""></select></h6>
-    </section>
-    <section>
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
-        <h6>Electronics  <select style="border: none; background-color: white; color: black;" name="" id=""></select></h6>
-    </section>
-    <section>
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100" alt="">
-        <h6>Home <select style="border: none; background-color: white; color: black;" name="" id=""></select></h6>
-    </section>
-    <section>
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100" alt="">
-        <h6>Appliances</h6>
-    </section>
-    <section>
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100
-        " alt="">
-        <h6>Travel</h6>
-    </section>
-    <section>
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" alt="">
-        <h6>Beauty,Toy & More <select style="border: none; background-color: white; color: black;" name="" id=""></select></h6>
-    </section>
-    <section>
-        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100" alt="">
-        <h6>2- Wheelers</h6>
-    </section>
 
 
-</main>
-<!-- MDB -->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
-></script>
-
-</body>
+document.getElementById('txt').addEventListener('input',input);
+    </script>
+  </body>
 </html>
