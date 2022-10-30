@@ -1,170 +1,2864 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linkedin</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-     crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <style>
-      nav{
-    display: flex;
-    justify-content: space-between;
-}
-.nav-iteams{
-    display: flex;
-    width: 50%;
-
-}
-.logo{
-       margin-left: 100px;
-}
-img{
-    height: 80px;
-    margin: 10px;
-}
-li{
-    list-style-type: none;
-    margin: 5px;
-}
-.fives{
-    display: flex;
-    margin-left: 20px;
-}
-#btone{
-    width: 100px;
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid white;
-    background-color: aliceblue;
-    font-size: 20px;
-    border-radius: 20px;
-}
-#bttwo{
-    width: 100px;
-    padding: 10px;
-    background-color: white;
-    color: blue;
-    border: 1px solid blue;
-    font-size: 20px;
-    border-radius: 20px;
-}
-#fourth{
-    border-right:1px solid black ;
-    height: 60px;
-}
-.one{
-    width: 50%;
-    margin-left: 100px;
-    
-}
-#h1{
-    font-size: 70px;
-    color: brown;
-    font-weight: 50;
-}
-input{
-    padding: 15px;
-    margin-top: 10px;
-    width: 400px;
-}
-p{
-    
-    width: 400px;
-}
-button{
-    width: 350px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: blue;
-   border: 1px solid blue;
-
-}
-#bt3{
-   margin-left: 10px ;
-   
-}
-a{
-    color: blue;
-}
-main{
-    display: flex;
-    
-}
-.pic{ 
-    width: 80%;
-    height: 600px;
-}
-     </style>
-</head>
-<body>
-    <!-- start your code here -->
-    <nav class="nav">
-        <section class="logo">
-            <img id="img" src="data:image/png;base64,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" alt="">
-        </section>
-        <section class="nav-iteams">
-                  <section id="first">
-                       <ul>
-                       <center> <li><i class="fa-regular fa-compass"></i></li></center>
-                        <li>Discover
-                        </li>
-                       </ul>
-                  </section>
-                  <section id="second">
-                    <ul>
-                       <center> <li><i class="fa-solid fa-people-group"></i></li></center>
-                        <li>People</li>
-                    </ul>
-                  </section>
-                  <section id="thrid">
-                    <ul>
-                       <center> <li><i class="fas fa-film"></i></li></center>
-                        <li>Learning</li>
-                    </ul>
-                  </section>
-                  <section id="fourth">
-                    <ul>
-                       <center> <li><i class="fas fa-briefcase"></i></li></center>
-                        <li>jobs</li>
-                    </ul>
-                  </section>
-                <section class="five">
-                    <ul class="fives">
-                        <li><button id="btone">join now</button></li> 
-                        <li><button id="bttwo">Login</button></li>       
-                    </ul>
-                </section>
-        </section>
-    </nav>
-    <main>
-        <section class="one">
-           <section class="one-one">
-            <h1 id="h1">Join the biggest professional community</h1>
-           </section>
-               <section class="one-second">
-                <section class="form">
-                    <form action="">
-                        <input type="email" name="" id="" placeholder="Email"><br />
-                        <input type="password" name="" id="" placeholder="password" min="8">
-                        <p>By clicking Agree & Join, you agree to the LinkedIn <a href="#"> User Agreement, Privacy Policy, and Cookie Policy</a>.</p>
-                      
-                    </form>
-                    <div id="bt3">
-                        <button >Agree & join</button>
-                    </div>
-                </section>
-
-               </section>
-            
-        </section>
-        <section class="second">
-            <img class="pic" src="data:image/jpeg;base64,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" alt="">
-        </section>
-    </main>
-</body>
-</html>
+const countries_data = [
+	{
+			"name": "Afghanistan",
+			"capital": "Kabul",
+			"languages": [
+					"Pashto",
+					"Uzbek",
+					"Turkmen"
+			],
+			"population": 40218234,
+			"flag": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg",
+			"region": "Asia",
+			"area": 652230
+	},
+	{
+			"name": "Åland Islands",
+			"capital": "Mariehamn",
+			"languages": [
+					"Swedish"
+			],
+			"population": 28875,
+			"flag": "https://flagcdn.com/ax.svg",
+			"region": "Europe",
+			"area": 1580
+	},
+	{
+			"name": "Albania",
+			"capital": "Tirana",
+			"languages": [
+					"Albanian"
+			],
+			"population": 2837743,
+			"flag": "https://flagcdn.com/al.svg",
+			"region": "Europe",
+			"area": 28748
+	},
+	{
+			"name": "Algeria",
+			"capital": "Algiers",
+			"languages": [
+					"Arabic"
+			],
+			"population": 43851043,
+			"flag": "https://flagcdn.com/dz.svg",
+			"region": "Africa",
+			"area": 2381741
+	},
+	{
+			"name": "American Samoa",
+			"capital": "Pago Pago",
+			"languages": [
+					"English",
+					"Samoan"
+			],
+			"population": 55197,
+			"flag": "https://flagcdn.com/as.svg",
+			"region": "Oceania",
+			"area": 199
+	},
+	{
+			"name": "Andorra",
+			"capital": "Andorra la Vella",
+			"languages": [
+					"Catalan"
+			],
+			"population": 77265,
+			"flag": "https://flagcdn.com/ad.svg",
+			"region": "Europe",
+			"area": 468
+	},
+	{
+			"name": "Angola",
+			"capital": "Luanda",
+			"languages": [
+					"Portuguese"
+			],
+			"population": 32866268,
+			"flag": "https://flagcdn.com/ao.svg",
+			"region": "Africa",
+			"area": 1246700
+	},
+	{
+			"name": "Anguilla",
+			"capital": "The Valley",
+			"languages": [
+					"English"
+			],
+			"population": 13452,
+			"flag": "https://flagcdn.com/ai.svg",
+			"region": "Americas",
+			"area": 91
+	},
+	{
+			"name": "Antarctica",
+			"languages": [
+					"English",
+					"Russian"
+			],
+			"population": 1000,
+			"flag": "https://flagcdn.com/aq.svg",
+			"region": "Polar",
+			"area": 14000000
+	},
+	{
+			"name": "Antigua and Barbuda",
+			"capital": "Saint John's",
+			"languages": [
+					"English"
+			],
+			"population": 97928,
+			"flag": "https://flagcdn.com/ag.svg",
+			"region": "Americas",
+			"area": 442
+	},
+	{
+			"name": "Argentina",
+			"capital": "Buenos Aires",
+			"languages": [
+					"Spanish",
+					"Guaraní"
+			],
+			"population": 45376763,
+			"flag": "https://flagcdn.com/ar.svg",
+			"region": "Americas",
+			"area": 2780400
+	},
+	{
+			"name": "Armenia",
+			"capital": "Yerevan",
+			"languages": [
+					"Armenian"
+			],
+			"population": 2963234,
+			"flag": "https://flagcdn.com/am.svg",
+			"region": "Asia",
+			"area": 29743
+	},
+	{
+			"name": "Aruba",
+			"capital": "Oranjestad",
+			"languages": [
+					"Dutch",
+					"(Eastern) Punjabi"
+			],
+			"population": 106766,
+			"flag": "https://flagcdn.com/aw.svg",
+			"region": "Americas",
+			"area": 180
+	},
+	{
+			"name": "Australia",
+			"capital": "Canberra",
+			"languages": [
+					"English"
+			],
+			"population": 25687041,
+			"flag": "https://flagcdn.com/au.svg",
+			"region": "Oceania",
+			"area": 7692024
+	},
+	{
+			"name": "Austria",
+			"capital": "Vienna",
+			"languages": [
+					"German"
+			],
+			"population": 8917205,
+			"flag": "https://flagcdn.com/at.svg",
+			"region": "Europe",
+			"area": 83871
+	},
+	{
+			"name": "Azerbaijan",
+			"capital": "Baku",
+			"languages": [
+					"Azerbaijani"
+			],
+			"population": 10110116,
+			"flag": "https://flagcdn.com/az.svg",
+			"region": "Asia",
+			"area": 86600
+	},
+	{
+			"name": "Bahamas",
+			"capital": "Nassau",
+			"languages": [
+					"English"
+			],
+			"population": 393248,
+			"flag": "https://flagcdn.com/bs.svg",
+			"region": "Americas",
+			"area": 13943
+	},
+	{
+			"name": "Bahrain",
+			"capital": "Manama",
+			"languages": [
+					"Arabic"
+			],
+			"population": 1701583,
+			"flag": "https://flagcdn.com/bh.svg",
+			"region": "Asia",
+			"area": 765
+	},
+	{
+			"name": "Bangladesh",
+			"capital": "Dhaka",
+			"languages": [
+					"Bengali"
+			],
+			"population": 164689383,
+			"flag": "https://flagcdn.com/bd.svg",
+			"region": "Asia",
+			"area": 147570
+	},
+	{
+			"name": "Barbados",
+			"capital": "Bridgetown",
+			"languages": [
+					"English"
+			],
+			"population": 287371,
+			"flag": "https://flagcdn.com/bb.svg",
+			"region": "Americas",
+			"area": 430
+	},
+	{
+			"name": "Belarus",
+			"capital": "Minsk",
+			"languages": [
+					"Belarusian",
+					"Russian"
+			],
+			"population": 9398861,
+			"flag": "https://flagcdn.com/by.svg",
+			"region": "Europe",
+			"area": 207600
+	},
+	{
+			"name": "Belgium",
+			"capital": "Brussels",
+			"languages": [
+					"Dutch",
+					"French",
+					"German"
+			],
+			"population": 11555997,
+			"flag": "https://flagcdn.com/be.svg",
+			"region": "Europe",
+			"area": 30528
+	},
+	{
+			"name": "Belize",
+			"capital": "Belmopan",
+			"languages": [
+					"English",
+					"Spanish"
+			],
+			"population": 397621,
+			"flag": "https://flagcdn.com/bz.svg",
+			"region": "Americas",
+			"area": 22966
+	},
+	{
+			"name": "Benin",
+			"capital": "Porto-Novo",
+			"languages": [
+					"French"
+			],
+			"population": 12123198,
+			"flag": "https://flagcdn.com/bj.svg",
+			"region": "Africa",
+			"area": 112622
+	},
+	{
+			"name": "Bermuda",
+			"capital": "Hamilton",
+			"languages": [
+					"English"
+			],
+			"population": 63903,
+			"flag": "https://flagcdn.com/bm.svg",
+			"region": "Americas",
+			"area": 54
+	},
+	{
+			"name": "Bhutan",
+			"capital": "Thimphu",
+			"languages": [
+					"Dzongkha"
+			],
+			"population": 771612,
+			"flag": "https://flagcdn.com/bt.svg",
+			"region": "Asia",
+			"area": 38394
+	},
+	{
+			"name": "Bolivia (Plurinational State of)",
+			"capital": "Sucre",
+			"languages": [
+					"Spanish",
+					"Aymara",
+					"Quechua"
+			],
+			"population": 11673029,
+			"flag": "https://flagcdn.com/bo.svg",
+			"region": "Americas",
+			"area": 1098581
+	},
+	{
+			"name": "Bonaire, Sint Eustatius and Saba",
+			"capital": "Kralendijk",
+			"languages": [
+					"Dutch"
+			],
+			"population": 17408,
+			"flag": "https://flagcdn.com/bq.svg",
+			"region": "Americas",
+			"area": 294
+	},
+	{
+			"name": "Bosnia and Herzegovina",
+			"capital": "Sarajevo",
+			"languages": [
+					"Bosnian",
+					"Croatian",
+					"Serbian"
+			],
+			"population": 3280815,
+			"flag": "https://flagcdn.com/ba.svg",
+			"region": "Europe",
+			"area": 51209
+	},
+	{
+			"name": "Botswana",
+			"capital": "Gaborone",
+			"languages": [
+					"English",
+					"Tswana"
+			],
+			"population": 2351625,
+			"flag": "https://flagcdn.com/bw.svg",
+			"region": "Africa",
+			"area": 582000
+	},
+	{
+			"name": "Bouvet Island",
+			"languages": [
+					"Norwegian",
+					"Norwegian Bokmål",
+					"Norwegian Nynorsk"
+			],
+			"population": 0,
+			"flag": "https://flagcdn.com/bv.svg",
+			"region": "Antarctic Ocean",
+			"area": 49
+	},
+	{
+			"name": "Brazil",
+			"capital": "Brasília",
+			"languages": [
+					"Portuguese"
+			],
+			"population": 212559409,
+			"flag": "https://flagcdn.com/br.svg",
+			"region": "Americas",
+			"area": 8515767
+	},
+	{
+			"name": "British Indian Ocean Territory",
+			"capital": "Diego Garcia",
+			"languages": [
+					"English"
+			],
+			"population": 3000,
+			"flag": "https://flagcdn.com/io.svg",
+			"region": "Africa",
+			"area": 60
+	},
+	{
+			"name": "United States Minor Outlying Islands",
+			"languages": [
+					"English"
+			],
+			"population": 300,
+			"flag": "https://flagcdn.com/um.svg",
+			"region": "Americas"
+	},
+	{
+			"name": "Virgin Islands (British)",
+			"capital": "Road Town",
+			"languages": [
+					"English"
+			],
+			"population": 30237,
+			"flag": "https://flagcdn.com/vg.svg",
+			"region": "Americas",
+			"area": 151
+	},
+	{
+			"name": "Virgin Islands (U.S.)",
+			"capital": "Charlotte Amalie",
+			"languages": [
+					"English"
+			],
+			"population": 106290,
+			"flag": "https://flagcdn.com/vi.svg",
+			"region": "Americas",
+			"area": 346.36
+	},
+	{
+			"name": "Brunei Darussalam",
+			"capital": "Bandar Seri Begawan",
+			"languages": [
+					"Malay"
+			],
+			"population": 437483,
+			"flag": "https://flagcdn.com/bn.svg",
+			"region": "Asia",
+			"area": 5765
+	},
+	{
+			"name": "Bulgaria",
+			"capital": "Sofia",
+			"languages": [
+					"Bulgarian"
+			],
+			"population": 6927288,
+			"flag": "https://flagcdn.com/bg.svg",
+			"region": "Europe",
+			"area": 110879
+	},
+	{
+			"name": "Burkina Faso",
+			"capital": "Ouagadougou",
+			"languages": [
+					"French",
+					"Fula"
+			],
+			"population": 20903278,
+			"flag": "https://flagcdn.com/bf.svg",
+			"region": "Africa",
+			"area": 272967
+	},
+	{
+			"name": "Burundi",
+			"capital": "Gitega",
+			"languages": [
+					"French",
+					"Kirundi"
+			],
+			"population": 11890781,
+			"flag": "https://flagcdn.com/bi.svg",
+			"region": "Africa",
+			"area": 27834
+	},
+	{
+			"name": "Cambodia",
+			"capital": "Phnom Penh",
+			"languages": [
+					"Khmer"
+			],
+			"population": 16718971,
+			"flag": "https://flagcdn.com/kh.svg",
+			"region": "Asia",
+			"area": 181035
+	},
+	{
+			"name": "Cameroon",
+			"capital": "Yaoundé",
+			"languages": [
+					"English",
+					"French"
+			],
+			"population": 26545864,
+			"flag": "https://flagcdn.com/cm.svg",
+			"region": "Africa",
+			"area": 475442
+	},
+	{
+			"name": "Canada",
+			"capital": "Ottawa",
+			"languages": [
+					"English",
+					"French"
+			],
+			"population": 38005238,
+			"flag": "https://flagcdn.com/ca.svg",
+			"region": "Americas",
+			"area": 9984670
+	},
+	{
+			"name": "Cabo Verde",
+			"capital": "Praia",
+			"languages": [
+					"Portuguese"
+			],
+			"population": 555988,
+			"flag": "https://flagcdn.com/cv.svg",
+			"region": "Africa",
+			"area": 4033
+	},
+	{
+			"name": "Cayman Islands",
+			"capital": "George Town",
+			"languages": [
+					"English"
+			],
+			"population": 65720,
+			"flag": "https://flagcdn.com/ky.svg",
+			"region": "Americas",
+			"area": 264
+	},
+	{
+			"name": "Central African Republic",
+			"capital": "Bangui",
+			"languages": [
+					"French",
+					"Sango"
+			],
+			"population": 4829764,
+			"flag": "https://flagcdn.com/cf.svg",
+			"region": "Africa",
+			"area": 622984
+	},
+	{
+			"name": "Chad",
+			"capital": "N'Djamena",
+			"languages": [
+					"French",
+					"Arabic"
+			],
+			"population": 16425859,
+			"flag": "https://flagcdn.com/td.svg",
+			"region": "Africa",
+			"area": 1284000
+	},
+	{
+			"name": "Chile",
+			"capital": "Santiago",
+			"languages": [
+					"Spanish"
+			],
+			"population": 19116209,
+			"flag": "https://flagcdn.com/cl.svg",
+			"region": "Americas",
+			"area": 756102
+	},
+	{
+			"name": "China",
+			"capital": "Beijing",
+			"languages": [
+					"Chinese"
+			],
+			"population": 1402112000,
+			"flag": "https://flagcdn.com/cn.svg",
+			"region": "Asia",
+			"area": 9640011
+	},
+	{
+			"name": "Christmas Island",
+			"capital": "Flying Fish Cove",
+			"languages": [
+					"English"
+			],
+			"population": 2072,
+			"flag": "https://flagcdn.com/cx.svg",
+			"region": "Oceania",
+			"area": 135
+	},
+	{
+			"name": "Cocos (Keeling) Islands",
+			"capital": "West Island",
+			"languages": [
+					"English"
+			],
+			"population": 550,
+			"flag": "https://flagcdn.com/cc.svg",
+			"region": "Oceania",
+			"area": 14
+	},
+	{
+			"name": "Colombia",
+			"capital": "Bogotá",
+			"languages": [
+					"Spanish"
+			],
+			"population": 50882884,
+			"flag": "https://flagcdn.com/co.svg",
+			"region": "Americas",
+			"area": 1141748
+	},
+	{
+			"name": "Comoros",
+			"capital": "Moroni",
+			"languages": [
+					"Arabic",
+					"French"
+			],
+			"population": 869595,
+			"flag": "https://flagcdn.com/km.svg",
+			"region": "Africa",
+			"area": 1862
+	},
+	{
+			"name": "Congo",
+			"capital": "Brazzaville",
+			"languages": [
+					"French",
+					"Lingala"
+			],
+			"population": 5518092,
+			"flag": "https://flagcdn.com/cg.svg",
+			"region": "Africa",
+			"area": 342000
+	},
+	{
+			"name": "Congo (Democratic Republic of the)",
+			"capital": "Kinshasa",
+			"languages": [
+					"French",
+					"Lingala",
+					"Kongo",
+					"Swahili",
+					"Luba-Katanga"
+			],
+			"population": 89561404,
+			"flag": "https://flagcdn.com/cd.svg",
+			"region": "Africa",
+			"area": 2344858
+	},
+	{
+			"name": "Cook Islands",
+			"capital": "Avarua",
+			"languages": [
+					"English",
+					"Cook Islands Māori"
+			],
+			"population": 18100,
+			"flag": "https://flagcdn.com/ck.svg",
+			"region": "Oceania",
+			"area": 236
+	},
+	{
+			"name": "Costa Rica",
+			"capital": "San José",
+			"languages": [
+					"Spanish"
+			],
+			"population": 5094114,
+			"flag": "https://flagcdn.com/cr.svg",
+			"region": "Americas",
+			"area": 51100
+	},
+	{
+			"name": "Croatia",
+			"capital": "Zagreb",
+			"languages": [
+					"Croatian"
+			],
+			"population": 4047200,
+			"flag": "https://flagcdn.com/hr.svg",
+			"region": "Europe",
+			"area": 56594
+	},
+	{
+			"name": "Cuba",
+			"capital": "Havana",
+			"languages": [
+					"Spanish"
+			],
+			"population": 11326616,
+			"flag": "https://flagcdn.com/cu.svg",
+			"region": "Americas",
+			"area": 109884
+	},
+	{
+			"name": "Curaçao",
+			"capital": "Willemstad",
+			"languages": [
+					"Dutch",
+					"(Eastern) Punjabi",
+					"English"
+			],
+			"population": 155014,
+			"flag": "https://flagcdn.com/cw.svg",
+			"region": "Americas",
+			"area": 444
+	},
+	{
+			"name": "Cyprus",
+			"capital": "Nicosia",
+			"languages": [
+					"Greek (modern)",
+					"Turkish",
+					"Armenian"
+			],
+			"population": 1207361,
+			"flag": "https://flagcdn.com/cy.svg",
+			"region": "Europe",
+			"area": 9251
+	},
+	{
+			"name": "Czech Republic",
+			"capital": "Prague",
+			"languages": [
+					"Czech",
+					"Slovak"
+			],
+			"population": 10698896,
+			"flag": "https://flagcdn.com/cz.svg",
+			"region": "Europe",
+			"area": 78865
+	},
+	{
+			"name": "Denmark",
+			"capital": "Copenhagen",
+			"languages": [
+					"Danish"
+			],
+			"population": 5831404,
+			"flag": "https://flagcdn.com/dk.svg",
+			"region": "Europe",
+			"area": 43094
+	},
+	{
+			"name": "Djibouti",
+			"capital": "Djibouti",
+			"languages": [
+					"French",
+					"Arabic"
+			],
+			"population": 988002,
+			"flag": "https://flagcdn.com/dj.svg",
+			"region": "Africa",
+			"area": 23200
+	},
+	{
+			"name": "Dominica",
+			"capital": "Roseau",
+			"languages": [
+					"English"
+			],
+			"population": 71991,
+			"flag": "https://flagcdn.com/dm.svg",
+			"region": "Americas",
+			"area": 751
+	},
+	{
+			"name": "Dominican Republic",
+			"capital": "Santo Domingo",
+			"languages": [
+					"Spanish"
+			],
+			"population": 10847904,
+			"flag": "https://flagcdn.com/do.svg",
+			"region": "Americas",
+			"area": 48671
+	},
+	{
+			"name": "Ecuador",
+			"capital": "Quito",
+			"languages": [
+					"Spanish"
+			],
+			"population": 17643060,
+			"flag": "https://flagcdn.com/ec.svg",
+			"region": "Americas",
+			"area": 276841
+	},
+	{
+			"name": "Egypt",
+			"capital": "Cairo",
+			"languages": [
+					"Arabic"
+			],
+			"population": 102334403,
+			"flag": "https://flagcdn.com/eg.svg",
+			"region": "Africa",
+			"area": 1002450
+	},
+	{
+			"name": "El Salvador",
+			"capital": "San Salvador",
+			"languages": [
+					"Spanish"
+			],
+			"population": 6486201,
+			"flag": "https://flagcdn.com/sv.svg",
+			"region": "Americas",
+			"area": 21041
+	},
+	{
+			"name": "Equatorial Guinea",
+			"capital": "Malabo",
+			"languages": [
+					"Spanish",
+					"French",
+					"Portuguese",
+					"Fang"
+			],
+			"population": 1402985,
+			"flag": "https://flagcdn.com/gq.svg",
+			"region": "Africa",
+			"area": 28051
+	},
+	{
+			"name": "Eritrea",
+			"capital": "Asmara",
+			"languages": [
+					"Tigrinya",
+					"Arabic",
+					"English",
+					"Tigre",
+					"Kunama",
+					"Saho",
+					"Bilen",
+					"Nara",
+					"Afar"
+			],
+			"population": 5352000,
+			"flag": "https://flagcdn.com/er.svg",
+			"region": "Africa",
+			"area": 117600
+	},
+	{
+			"name": "Estonia",
+			"capital": "Tallinn",
+			"languages": [
+					"Estonian"
+			],
+			"population": 1331057,
+			"flag": "https://flagcdn.com/ee.svg",
+			"region": "Europe",
+			"area": 45227
+	},
+	{
+			"name": "Ethiopia",
+			"capital": "Addis Ababa",
+			"languages": [
+					"Amharic"
+			],
+			"population": 114963583,
+			"flag": "https://flagcdn.com/et.svg",
+			"region": "Africa",
+			"area": 1104300
+	},
+	{
+			"name": "Falkland Islands (Malvinas)",
+			"capital": "Stanley",
+			"languages": [
+					"English"
+			],
+			"population": 2563,
+			"flag": "https://flagcdn.com/fk.svg",
+			"region": "Americas",
+			"area": 12173
+	},
+	{
+			"name": "Faroe Islands",
+			"capital": "Tórshavn",
+			"languages": [
+					"Faroese"
+			],
+			"population": 48865,
+			"flag": "https://flagcdn.com/fo.svg",
+			"region": "Europe",
+			"area": 1393
+	},
+	{
+			"name": "Fiji",
+			"capital": "Suva",
+			"languages": [
+					"English",
+					"Fijian",
+					"Fiji Hindi",
+					"Rotuman"
+			],
+			"population": 896444,
+			"flag": "https://flagcdn.com/fj.svg",
+			"region": "Oceania",
+			"area": 18272
+	},
+	{
+			"name": "Finland",
+			"capital": "Helsinki",
+			"languages": [
+					"Finnish",
+					"Swedish"
+			],
+			"population": 5530719,
+			"flag": "https://flagcdn.com/fi.svg",
+			"region": "Europe",
+			"area": 338424
+	},
+	{
+			"name": "France",
+			"capital": "Paris",
+			"languages": [
+					"French"
+			],
+			"population": 67391582,
+			"flag": "https://flagcdn.com/fr.svg",
+			"region": "Europe",
+			"area": 640679
+	},
+	{
+			"name": "French Guiana",
+			"capital": "Cayenne",
+			"languages": [
+					"French"
+			],
+			"population": 254541,
+			"flag": "https://flagcdn.com/gf.svg",
+			"region": "Americas"
+	},
+	{
+			"name": "French Polynesia",
+			"capital": "Papeetē",
+			"languages": [
+					"French"
+			],
+			"population": 280904,
+			"flag": "https://flagcdn.com/pf.svg",
+			"region": "Oceania",
+			"area": 4167
+	},
+	{
+			"name": "French Southern Territories",
+			"capital": "Port-aux-Français",
+			"languages": [
+					"French"
+			],
+			"population": 140,
+			"flag": "https://flagcdn.com/tf.svg",
+			"region": "Africa",
+			"area": 7747
+	},
+	{
+			"name": "Gabon",
+			"capital": "Libreville",
+			"languages": [
+					"French"
+			],
+			"population": 2225728,
+			"flag": "https://flagcdn.com/ga.svg",
+			"region": "Africa",
+			"area": 267668
+	},
+	{
+			"name": "Gambia",
+			"capital": "Banjul",
+			"languages": [
+					"English"
+			],
+			"population": 2416664,
+			"flag": "https://flagcdn.com/gm.svg",
+			"region": "Africa",
+			"area": 11295
+	},
+	{
+			"name": "Georgia",
+			"capital": "Tbilisi",
+			"languages": [
+					"Georgian"
+			],
+			"population": 3714000,
+			"flag": "https://flagcdn.com/ge.svg",
+			"region": "Asia",
+			"area": 69700
+	},
+	{
+			"name": "Germany",
+			"capital": "Berlin",
+			"languages": [
+					"German"
+			],
+			"population": 83240525,
+			"flag": "https://flagcdn.com/de.svg",
+			"region": "Europe",
+			"area": 357114
+	},
+	{
+			"name": "Ghana",
+			"capital": "Accra",
+			"languages": [
+					"English"
+			],
+			"population": 31072945,
+			"flag": "https://flagcdn.com/gh.svg",
+			"region": "Africa",
+			"area": 238533
+	},
+	{
+			"name": "Gibraltar",
+			"capital": "Gibraltar",
+			"languages": [
+					"English"
+			],
+			"population": 33691,
+			"flag": "https://flagcdn.com/gi.svg",
+			"region": "Europe",
+			"area": 6
+	},
+	{
+			"name": "Greece",
+			"capital": "Athens",
+			"languages": [
+					"Greek (modern)"
+			],
+			"population": 10715549,
+			"flag": "https://flagcdn.com/gr.svg",
+			"region": "Europe",
+			"area": 131990
+	},
+	{
+			"name": "Greenland",
+			"capital": "Nuuk",
+			"languages": [
+					"Kalaallisut"
+			],
+			"population": 56367,
+			"flag": "https://flagcdn.com/gl.svg",
+			"region": "Americas",
+			"area": 2166086
+	},
+	{
+			"name": "Grenada",
+			"capital": "St. George's",
+			"languages": [
+					"English"
+			],
+			"population": 112519,
+			"flag": "https://flagcdn.com/gd.svg",
+			"region": "Americas",
+			"area": 344
+	},
+	{
+			"name": "Guadeloupe",
+			"capital": "Basse-Terre",
+			"languages": [
+					"French"
+			],
+			"population": 400132,
+			"flag": "https://flagcdn.com/gp.svg",
+			"region": "Americas"
+	},
+	{
+			"name": "Guam",
+			"capital": "Hagåtña",
+			"languages": [
+					"English",
+					"Chamorro",
+					"Spanish"
+			],
+			"population": 168783,
+			"flag": "https://flagcdn.com/gu.svg",
+			"region": "Oceania",
+			"area": 549
+	},
+	{
+			"name": "Guatemala",
+			"capital": "Guatemala City",
+			"languages": [
+					"Spanish"
+			],
+			"population": 16858333,
+			"flag": "https://flagcdn.com/gt.svg",
+			"region": "Americas",
+			"area": 108889
+	},
+	{
+			"name": "Guernsey",
+			"capital": "St. Peter Port",
+			"languages": [
+					"English",
+					"French"
+			],
+			"population": 62999,
+			"flag": "https://flagcdn.com/gg.svg",
+			"region": "Europe",
+			"area": 78
+	},
+	{
+			"name": "Guinea",
+			"capital": "Conakry",
+			"languages": [
+					"French",
+					"Fula"
+			],
+			"population": 13132792,
+			"flag": "https://flagcdn.com/gn.svg",
+			"region": "Africa",
+			"area": 245857
+	},
+	{
+			"name": "Guinea-Bissau",
+			"capital": "Bissau",
+			"languages": [
+					"Portuguese"
+			],
+			"population": 1967998,
+			"flag": "https://flagcdn.com/gw.svg",
+			"region": "Africa",
+			"area": 36125
+	},
+	{
+			"name": "Guyana",
+			"capital": "Georgetown",
+			"languages": [
+					"English"
+			],
+			"population": 786559,
+			"flag": "https://flagcdn.com/gy.svg",
+			"region": "Americas",
+			"area": 214969
+	},
+	{
+			"name": "Haiti",
+			"capital": "Port-au-Prince",
+			"languages": [
+					"French",
+					"Haitian"
+			],
+			"population": 11402533,
+			"flag": "https://flagcdn.com/ht.svg",
+			"region": "Americas",
+			"area": 27750
+	},
+	{
+			"name": "Heard Island and McDonald Islands",
+			"languages": [
+					"English"
+			],
+			"population": 0,
+			"flag": "https://flagcdn.com/hm.svg",
+			"region": "Antarctic",
+			"area": 412
+	},
+	{
+			"name": "Vatican City",
+			"capital": "Vatican City",
+			"languages": [
+					"Latin",
+					"Italian",
+					"French",
+					"German"
+			],
+			"population": 451,
+			"flag": "https://flagcdn.com/va.svg",
+			"region": "Europe",
+			"area": 0.44
+	},
+	{
+			"name": "Honduras",
+			"capital": "Tegucigalpa",
+			"languages": [
+					"Spanish"
+			],
+			"population": 9904608,
+			"flag": "https://flagcdn.com/hn.svg",
+			"region": "Americas",
+			"area": 112492
+	},
+	{
+			"name": "Hungary",
+			"capital": "Budapest",
+			"languages": [
+					"Hungarian"
+			],
+			"population": 9749763,
+			"flag": "https://flagcdn.com/hu.svg",
+			"region": "Europe",
+			"area": 93028
+	},
+	{
+			"name": "Hong Kong",
+			"capital": "City of Victoria",
+			"languages": [
+					"English",
+					"Chinese"
+			],
+			"population": 7481800,
+			"flag": "https://flagcdn.com/hk.svg",
+			"region": "Asia",
+			"area": 1104
+	},
+	{
+			"name": "Iceland",
+			"capital": "Reykjavík",
+			"languages": [
+					"Icelandic"
+			],
+			"population": 366425,
+			"flag": "https://flagcdn.com/is.svg",
+			"region": "Europe",
+			"area": 103000
+	},
+	{
+			"name": "India",
+			"capital": "New Delhi",
+			"languages": [
+					"Hindi",
+					"English"
+			],
+			"population": 1380004385,
+			"flag": "https://flagcdn.com/in.svg",
+			"region": "Asia",
+			"area": 3287590
+	},
+	{
+			"name": "Indonesia",
+			"capital": "Jakarta",
+			"languages": [
+					"Indonesian"
+			],
+			"population": 273523621,
+			"flag": "https://flagcdn.com/id.svg",
+			"region": "Asia",
+			"area": 1904569
+	},
+	{
+			"name": "Ivory Coast",
+			"capital": "Yamoussoukro",
+			"languages": [
+					"French"
+			],
+			"population": 26378275,
+			"flag": "https://flagcdn.com/ci.svg",
+			"region": "Africa",
+			"area": 322463
+	},
+	{
+			"name": "Iran (Islamic Republic of)",
+			"capital": "Tehran",
+			"languages": [
+					"Persian (Farsi)"
+			],
+			"population": 83992953,
+			"flag": "https://flagcdn.com/ir.svg",
+			"region": "Asia",
+			"area": 1648195
+	},
+	{
+			"name": "Iraq",
+			"capital": "Baghdad",
+			"languages": [
+					"Arabic",
+					"Kurdish"
+			],
+			"population": 40222503,
+			"flag": "https://flagcdn.com/iq.svg",
+			"region": "Asia",
+			"area": 438317
+	},
+	{
+			"name": "Ireland",
+			"capital": "Dublin",
+			"languages": [
+					"Irish",
+					"English"
+			],
+			"population": 4994724,
+			"flag": "https://flagcdn.com/ie.svg",
+			"region": "Europe",
+			"area": 70273
+	},
+	{
+			"name": "Isle of Man",
+			"capital": "Douglas",
+			"languages": [
+					"English",
+					"Manx"
+			],
+			"population": 85032,
+			"flag": "https://flagcdn.com/im.svg",
+			"region": "Europe",
+			"area": 572
+	},
+	{
+			"name": "Israel",
+			"capital": "Jerusalem",
+			"languages": [
+					"Hebrew (modern)",
+					"Arabic"
+			],
+			"population": 9216900,
+			"flag": "https://flagcdn.com/il.svg",
+			"region": "Asia",
+			"area": 20770
+	},
+	{
+			"name": "Italy",
+			"capital": "Rome",
+			"languages": [
+					"Italian"
+			],
+			"population": 59554023,
+			"flag": "https://flagcdn.com/it.svg",
+			"region": "Europe",
+			"area": 301336
+	},
+	{
+			"name": "Jamaica",
+			"capital": "Kingston",
+			"languages": [
+					"English"
+			],
+			"population": 2961161,
+			"flag": "https://flagcdn.com/jm.svg",
+			"region": "Americas",
+			"area": 10991
+	},
+	{
+			"name": "Japan",
+			"capital": "Tokyo",
+			"languages": [
+					"Japanese"
+			],
+			"population": 125836021,
+			"flag": "https://flagcdn.com/jp.svg",
+			"region": "Asia",
+			"area": 377930
+	},
+	{
+			"name": "Jersey",
+			"capital": "Saint Helier",
+			"languages": [
+					"English",
+					"French"
+			],
+			"population": 100800,
+			"flag": "https://flagcdn.com/je.svg",
+			"region": "Europe",
+			"area": 116
+	},
+	{
+			"name": "Jordan",
+			"capital": "Amman",
+			"languages": [
+					"Arabic"
+			],
+			"population": 10203140,
+			"flag": "https://flagcdn.com/jo.svg",
+			"region": "Asia",
+			"area": 89342
+	},
+	{
+			"name": "Kazakhstan",
+			"capital": "Nur-Sultan",
+			"languages": [
+					"Kazakh",
+					"Russian"
+			],
+			"population": 18754440,
+			"flag": "https://flagcdn.com/kz.svg",
+			"region": "Asia",
+			"area": 2724900
+	},
+	{
+			"name": "Kenya",
+			"capital": "Nairobi",
+			"languages": [
+					"English",
+					"Swahili"
+			],
+			"population": 53771300,
+			"flag": "https://flagcdn.com/ke.svg",
+			"region": "Africa",
+			"area": 580367
+	},
+	{
+			"name": "Kiribati",
+			"capital": "South Tarawa",
+			"languages": [
+					"English"
+			],
+			"population": 119446,
+			"flag": "https://flagcdn.com/ki.svg",
+			"region": "Oceania",
+			"area": 811
+	},
+	{
+			"name": "Kuwait",
+			"capital": "Kuwait City",
+			"languages": [
+					"Arabic"
+			],
+			"population": 4270563,
+			"flag": "https://flagcdn.com/kw.svg",
+			"region": "Asia",
+			"area": 17818
+	},
+	{
+			"name": "Kyrgyzstan",
+			"capital": "Bishkek",
+			"languages": [
+					"Kyrgyz",
+					"Russian"
+			],
+			"population": 6591600,
+			"flag": "https://flagcdn.com/kg.svg",
+			"region": "Asia",
+			"area": 199951
+	},
+	{
+			"name": "Lao People's Democratic Republic",
+			"capital": "Vientiane",
+			"languages": [
+					"Lao"
+			],
+			"population": 7275556,
+			"flag": "https://flagcdn.com/la.svg",
+			"region": "Asia",
+			"area": 236800
+	},
+	{
+			"name": "Latvia",
+			"capital": "Riga",
+			"languages": [
+					"Latvian"
+			],
+			"population": 1901548,
+			"flag": "https://flagcdn.com/lv.svg",
+			"region": "Europe",
+			"area": 64559
+	},
+	{
+			"name": "Lebanon",
+			"capital": "Beirut",
+			"languages": [
+					"Arabic",
+					"French"
+			],
+			"population": 6825442,
+			"flag": "https://flagcdn.com/lb.svg",
+			"region": "Asia",
+			"area": 10452
+	},
+	{
+			"name": "Lesotho",
+			"capital": "Maseru",
+			"languages": [
+					"English",
+					"Southern Sotho"
+			],
+			"population": 2142252,
+			"flag": "https://flagcdn.com/ls.svg",
+			"region": "Africa",
+			"area": 30355
+	},
+	{
+			"name": "Liberia",
+			"capital": "Monrovia",
+			"languages": [
+					"English"
+			],
+			"population": 5057677,
+			"flag": "https://flagcdn.com/lr.svg",
+			"region": "Africa",
+			"area": 111369
+	},
+	{
+			"name": "Libya",
+			"capital": "Tripoli",
+			"languages": [
+					"Arabic"
+			],
+			"population": 6871287,
+			"flag": "https://flagcdn.com/ly.svg",
+			"region": "Africa",
+			"area": 1759540
+	},
+	{
+			"name": "Liechtenstein",
+			"capital": "Vaduz",
+			"languages": [
+					"German"
+			],
+			"population": 38137,
+			"flag": "https://flagcdn.com/li.svg",
+			"region": "Europe",
+			"area": 160
+	},
+	{
+			"name": "Lithuania",
+			"capital": "Vilnius",
+			"languages": [
+					"Lithuanian"
+			],
+			"population": 2794700,
+			"flag": "https://flagcdn.com/lt.svg",
+			"region": "Europe",
+			"area": 65300
+	},
+	{
+			"name": "Luxembourg",
+			"capital": "Luxembourg",
+			"languages": [
+					"French",
+					"German",
+					"Luxembourgish"
+			],
+			"population": 632275,
+			"flag": "https://flagcdn.com/lu.svg",
+			"region": "Europe",
+			"area": 2586
+	},
+	{
+			"name": "Macao",
+			"languages": [
+					"Chinese",
+					"Portuguese"
+			],
+			"population": 649342,
+			"flag": "https://flagcdn.com/mo.svg",
+			"region": "Asia",
+			"area": 30
+	},
+	{
+			"name": "North Macedonia",
+			"capital": "Skopje",
+			"languages": [
+					"Macedonian"
+			],
+			"population": 2083380,
+			"flag": "https://flagcdn.com/mk.svg",
+			"region": "Europe",
+			"area": 25713
+	},
+	{
+			"name": "Madagascar",
+			"capital": "Antananarivo",
+			"languages": [
+					"French",
+					"Malagasy"
+			],
+			"population": 27691019,
+			"flag": "https://flagcdn.com/mg.svg",
+			"region": "Africa",
+			"area": 587041
+	},
+	{
+			"name": "Malawi",
+			"capital": "Lilongwe",
+			"languages": [
+					"English",
+					"Chichewa"
+			],
+			"population": 19129955,
+			"flag": "https://flagcdn.com/mw.svg",
+			"region": "Africa",
+			"area": 118484
+	},
+	{
+			"name": "Malaysia",
+			"capital": "Kuala Lumpur",
+			"languages": [
+					"Malaysian"
+			],
+			"population": 32365998,
+			"flag": "https://flagcdn.com/my.svg",
+			"region": "Asia",
+			"area": 330803
+	},
+	{
+			"name": "Maldives",
+			"capital": "Malé",
+			"languages": [
+					"Divehi"
+			],
+			"population": 540542,
+			"flag": "https://flagcdn.com/mv.svg",
+			"region": "Asia",
+			"area": 300
+	},
+	{
+			"name": "Mali",
+			"capital": "Bamako",
+			"languages": [
+					"French"
+			],
+			"population": 20250834,
+			"flag": "https://flagcdn.com/ml.svg",
+			"region": "Africa",
+			"area": 1240192
+	},
+	{
+			"name": "Malta",
+			"capital": "Valletta",
+			"languages": [
+					"Maltese",
+					"English"
+			],
+			"population": 525285,
+			"flag": "https://flagcdn.com/mt.svg",
+			"region": "Europe",
+			"area": 316
+	},
+	{
+			"name": "Marshall Islands",
+			"capital": "Majuro",
+			"languages": [
+					"English",
+					"Marshallese"
+			],
+			"population": 59194,
+			"flag": "https://flagcdn.com/mh.svg",
+			"region": "Oceania",
+			"area": 181
+	},
+	{
+			"name": "Martinique",
+			"capital": "Fort-de-France",
+			"languages": [
+					"French"
+			],
+			"population": 378243,
+			"flag": "https://flagcdn.com/mq.svg",
+			"region": "Americas"
+	},
+	{
+			"name": "Mauritania",
+			"capital": "Nouakchott",
+			"languages": [
+					"Arabic"
+			],
+			"population": 4649660,
+			"flag": "https://flagcdn.com/mr.svg",
+			"region": "Africa",
+			"area": 1030700
+	},
+	{
+			"name": "Mauritius",
+			"capital": "Port Louis",
+			"languages": [
+					"English"
+			],
+			"population": 1265740,
+			"flag": "https://flagcdn.com/mu.svg",
+			"region": "Africa",
+			"area": 2040
+	},
+	{
+			"name": "Mayotte",
+			"capital": "Mamoudzou",
+			"languages": [
+					"French"
+			],
+			"population": 226915,
+			"flag": "https://flagcdn.com/yt.svg",
+			"region": "Africa"
+	},
+	{
+			"name": "Mexico",
+			"capital": "Mexico City",
+			"languages": [
+					"Spanish"
+			],
+			"population": 128932753,
+			"flag": "https://flagcdn.com/mx.svg",
+			"region": "Americas",
+			"area": 1964375
+	},
+	{
+			"name": "Micronesia (Federated States of)",
+			"capital": "Palikir",
+			"languages": [
+					"English"
+			],
+			"population": 115021,
+			"flag": "https://flagcdn.com/fm.svg",
+			"region": "Oceania",
+			"area": 702
+	},
+	{
+			"name": "Moldova (Republic of)",
+			"capital": "Chișinău",
+			"languages": [
+					"Romanian"
+			],
+			"population": 2617820,
+			"flag": "https://flagcdn.com/md.svg",
+			"region": "Europe",
+			"area": 33846
+	},
+	{
+			"name": "Monaco",
+			"capital": "Monaco",
+			"languages": [
+					"French"
+			],
+			"population": 39244,
+			"flag": "https://flagcdn.com/mc.svg",
+			"region": "Europe",
+			"area": 2.02
+	},
+	{
+			"name": "Mongolia",
+			"capital": "Ulan Bator",
+			"languages": [
+					"Mongolian"
+			],
+			"population": 3278292,
+			"flag": "https://flagcdn.com/mn.svg",
+			"region": "Asia",
+			"area": 1564110
+	},
+	{
+			"name": "Montenegro",
+			"capital": "Podgorica",
+			"languages": [
+					"Serbian",
+					"Bosnian",
+					"Albanian",
+					"Croatian"
+			],
+			"population": 621718,
+			"flag": "https://flagcdn.com/me.svg",
+			"region": "Europe",
+			"area": 13812
+	},
+	{
+			"name": "Montserrat",
+			"capital": "Plymouth",
+			"languages": [
+					"English"
+			],
+			"population": 4922,
+			"flag": "https://flagcdn.com/ms.svg",
+			"region": "Americas",
+			"area": 102
+	},
+	{
+			"name": "Morocco",
+			"capital": "Rabat",
+			"languages": [
+					"Arabic"
+			],
+			"population": 36910558,
+			"flag": "https://flagcdn.com/ma.svg",
+			"region": "Africa",
+			"area": 446550
+	},
+	{
+			"name": "Mozambique",
+			"capital": "Maputo",
+			"languages": [
+					"Portuguese"
+			],
+			"population": 31255435,
+			"flag": "https://flagcdn.com/mz.svg",
+			"region": "Africa",
+			"area": 801590
+	},
+	{
+			"name": "Myanmar",
+			"capital": "Naypyidaw",
+			"languages": [
+					"Burmese"
+			],
+			"population": 54409794,
+			"flag": "https://flagcdn.com/mm.svg",
+			"region": "Asia",
+			"area": 676578
+	},
+	{
+			"name": "Namibia",
+			"capital": "Windhoek",
+			"languages": [
+					"English",
+					"Afrikaans"
+			],
+			"population": 2540916,
+			"flag": "https://flagcdn.com/na.svg",
+			"region": "Africa",
+			"area": 825615
+	},
+	{
+			"name": "Nauru",
+			"capital": "Yaren",
+			"languages": [
+					"English",
+					"Nauruan"
+			],
+			"population": 10834,
+			"flag": "https://flagcdn.com/nr.svg",
+			"region": "Oceania",
+			"area": 21
+	},
+	{
+			"name": "Nepal",
+			"capital": "Kathmandu",
+			"languages": [
+					"Nepali"
+			],
+			"population": 29136808,
+			"flag": "https://flagcdn.com/np.svg",
+			"region": "Asia",
+			"area": 147181
+	},
+	{
+			"name": "Netherlands",
+			"capital": "Amsterdam",
+			"languages": [
+					"Dutch"
+			],
+			"population": 17441139,
+			"flag": "https://flagcdn.com/nl.svg",
+			"region": "Europe",
+			"area": 41850
+	},
+	{
+			"name": "New Caledonia",
+			"capital": "Nouméa",
+			"languages": [
+					"French"
+			],
+			"population": 271960,
+			"flag": "https://flagcdn.com/nc.svg",
+			"region": "Oceania",
+			"area": 18575
+	},
+	{
+			"name": "New Zealand",
+			"capital": "Wellington",
+			"languages": [
+					"English",
+					"Māori"
+			],
+			"population": 5084300,
+			"flag": "https://flagcdn.com/nz.svg",
+			"region": "Oceania",
+			"area": 270467
+	},
+	{
+			"name": "Nicaragua",
+			"capital": "Managua",
+			"languages": [
+					"Spanish"
+			],
+			"population": 6624554,
+			"flag": "https://flagcdn.com/ni.svg",
+			"region": "Americas",
+			"area": 130373
+	},
+	{
+			"name": "Niger",
+			"capital": "Niamey",
+			"languages": [
+					"French"
+			],
+			"population": 24206636,
+			"flag": "https://flagcdn.com/ne.svg",
+			"region": "Africa",
+			"area": 1267000
+	},
+	{
+			"name": "Nigeria",
+			"capital": "Abuja",
+			"languages": [
+					"English"
+			],
+			"population": 206139587,
+			"flag": "https://flagcdn.com/ng.svg",
+			"region": "Africa",
+			"area": 923768
+	},
+	{
+			"name": "Niue",
+			"capital": "Alofi",
+			"languages": [
+					"English"
+			],
+			"population": 1470,
+			"flag": "https://flagcdn.com/nu.svg",
+			"region": "Oceania",
+			"area": 260
+	},
+	{
+			"name": "Norfolk Island",
+			"capital": "Kingston",
+			"languages": [
+					"English"
+			],
+			"population": 2302,
+			"flag": "https://flagcdn.com/nf.svg",
+			"region": "Oceania",
+			"area": 36
+	},
+	{
+			"name": "Korea (Democratic People's Republic of)",
+			"capital": "Pyongyang",
+			"languages": [
+					"Korean"
+			],
+			"population": 25778815,
+			"flag": "https://flagcdn.com/kp.svg",
+			"region": "Asia",
+			"area": 120538
+	},
+	{
+			"name": "Northern Mariana Islands",
+			"capital": "Saipan",
+			"languages": [
+					"English",
+					"Chamorro"
+			],
+			"population": 57557,
+			"flag": "https://flagcdn.com/mp.svg",
+			"region": "Oceania",
+			"area": 464
+	},
+	{
+			"name": "Norway",
+			"capital": "Oslo",
+			"languages": [
+					"Norwegian",
+					"Norwegian Bokmål",
+					"Norwegian Nynorsk"
+			],
+			"population": 5379475,
+			"flag": "https://flagcdn.com/no.svg",
+			"region": "Europe",
+			"area": 323802
+	},
+	{
+			"name": "Oman",
+			"capital": "Muscat",
+			"languages": [
+					"Arabic"
+			],
+			"population": 5106622,
+			"flag": "https://flagcdn.com/om.svg",
+			"region": "Asia",
+			"area": 309500
+	},
+	{
+			"name": "Pakistan",
+			"capital": "Islamabad",
+			"languages": [
+					"Urdu",
+					"English"
+			],
+			"population": 220892331,
+			"flag": "https://flagcdn.com/pk.svg",
+			"region": "Asia",
+			"area": 881912
+	},
+	{
+			"name": "Palau",
+			"capital": "Ngerulmud",
+			"languages": [
+					"English"
+			],
+			"population": 18092,
+			"flag": "https://flagcdn.com/pw.svg",
+			"region": "Oceania",
+			"area": 459
+	},
+	{
+			"name": "Palestine, State of",
+			"capital": "Ramallah",
+			"languages": [
+					"Arabic"
+			],
+			"population": 4803269,
+			"flag": "https://flagcdn.com/ps.svg",
+			"region": "Asia"
+	},
+	{
+			"name": "Panama",
+			"capital": "Panama City",
+			"languages": [
+					"Spanish"
+			],
+			"population": 4314768,
+			"flag": "https://flagcdn.com/pa.svg",
+			"region": "Americas",
+			"area": 75417
+	},
+	{
+			"name": "Papua New Guinea",
+			"capital": "Port Moresby",
+			"languages": [
+					"English"
+			],
+			"population": 8947027,
+			"flag": "https://flagcdn.com/pg.svg",
+			"region": "Oceania",
+			"area": 462840
+	},
+	{
+			"name": "Paraguay",
+			"capital": "Asunción",
+			"languages": [
+					"Spanish",
+					"Guaraní"
+			],
+			"population": 7132530,
+			"flag": "https://flagcdn.com/py.svg",
+			"region": "Americas",
+			"area": 406752
+	},
+	{
+			"name": "Peru",
+			"capital": "Lima",
+			"languages": [
+					"Spanish"
+			],
+			"population": 32971846,
+			"flag": "https://flagcdn.com/pe.svg",
+			"region": "Americas",
+			"area": 1285216
+	},
+	{
+			"name": "Philippines",
+			"capital": "Manila",
+			"languages": [
+					"English"
+			],
+			"population": 109581085,
+			"flag": "https://flagcdn.com/ph.svg",
+			"region": "Asia",
+			"area": 342353
+	},
+	{
+			"name": "Pitcairn",
+			"capital": "Adamstown",
+			"languages": [
+					"English"
+			],
+			"population": 56,
+			"flag": "https://flagcdn.com/pn.svg",
+			"region": "Oceania",
+			"area": 47
+	},
+	{
+			"name": "Poland",
+			"capital": "Warsaw",
+			"languages": [
+					"Polish"
+			],
+			"population": 37950802,
+			"flag": "https://flagcdn.com/pl.svg",
+			"region": "Europe",
+			"area": 312679
+	},
+	{
+			"name": "Portugal",
+			"capital": "Lisbon",
+			"languages": [
+					"Portuguese"
+			],
+			"population": 10305564,
+			"flag": "https://flagcdn.com/pt.svg",
+			"region": "Europe",
+			"area": 92090
+	},
+	{
+			"name": "Puerto Rico",
+			"capital": "San Juan",
+			"languages": [
+					"Spanish",
+					"English"
+			],
+			"population": 3194034,
+			"flag": "https://flagcdn.com/pr.svg",
+			"region": "Americas",
+			"area": 8870
+	},
+	{
+			"name": "Qatar",
+			"capital": "Doha",
+			"languages": [
+					"Arabic"
+			],
+			"population": 2881060,
+			"flag": "https://flagcdn.com/qa.svg",
+			"region": "Asia",
+			"area": 11586
+	},
+	{
+			"name": "Republic of Kosovo",
+			"capital": "Pristina",
+			"languages": [
+					"Albanian",
+					"Serbian"
+			],
+			"population": 1775378,
+			"flag": "https://flagcdn.com/xk.svg",
+			"region": "Europe",
+			"area": 10908
+	},
+	{
+			"name": "Réunion",
+			"capital": "Saint-Denis",
+			"languages": [
+					"French"
+			],
+			"population": 840974,
+			"flag": "https://flagcdn.com/re.svg",
+			"region": "Africa"
+	},
+	{
+			"name": "Romania",
+			"capital": "Bucharest",
+			"languages": [
+					"Romanian"
+			],
+			"population": 19286123,
+			"flag": "https://flagcdn.com/ro.svg",
+			"region": "Europe",
+			"area": 238391
+	},
+	{
+			"name": "Russian Federation",
+			"capital": "Moscow",
+			"languages": [
+					"Russian"
+			],
+			"population": 144104080,
+			"flag": "https://flagcdn.com/ru.svg",
+			"region": "Europe",
+			"area": 17124442
+	},
+	{
+			"name": "Rwanda",
+			"capital": "Kigali",
+			"languages": [
+					"Kinyarwanda",
+					"English",
+					"French"
+			],
+			"population": 12952209,
+			"flag": "https://flagcdn.com/rw.svg",
+			"region": "Africa",
+			"area": 26338
+	},
+	{
+			"name": "Saint Barthélemy",
+			"capital": "Gustavia",
+			"languages": [
+					"French"
+			],
+			"population": 9417,
+			"flag": "https://flagcdn.com/bl.svg",
+			"region": "Americas",
+			"area": 21
+	},
+	{
+			"name": "Saint Helena, Ascension and Tristan da Cunha",
+			"capital": "Jamestown",
+			"languages": [
+					"English"
+			],
+			"population": 4255,
+			"flag": "https://flagcdn.com/sh.svg",
+			"region": "Africa"
+	},
+	{
+			"name": "Saint Kitts and Nevis",
+			"capital": "Basseterre",
+			"languages": [
+					"English"
+			],
+			"population": 53192,
+			"flag": "https://flagcdn.com/kn.svg",
+			"region": "Americas",
+			"area": 261
+	},
+	{
+			"name": "Saint Lucia",
+			"capital": "Castries",
+			"languages": [
+					"English"
+			],
+			"population": 183629,
+			"flag": "https://flagcdn.com/lc.svg",
+			"region": "Americas",
+			"area": 616
+	},
+	{
+			"name": "Saint Martin (French part)",
+			"capital": "Marigot",
+			"languages": [
+					"English",
+					"French",
+					"Dutch"
+			],
+			"population": 38659,
+			"flag": "https://flagcdn.com/mf.svg",
+			"region": "Americas",
+			"area": 53
+	},
+	{
+			"name": "Saint Pierre and Miquelon",
+			"capital": "Saint-Pierre",
+			"languages": [
+					"French"
+			],
+			"population": 6069,
+			"flag": "https://flagcdn.com/pm.svg",
+			"region": "Americas",
+			"area": 242
+	},
+	{
+			"name": "Saint Vincent and the Grenadines",
+			"capital": "Kingstown",
+			"languages": [
+					"English"
+			],
+			"population": 110947,
+			"flag": "https://flagcdn.com/vc.svg",
+			"region": "Americas",
+			"area": 389
+	},
+	{
+			"name": "Samoa",
+			"capital": "Apia",
+			"languages": [
+					"Samoan",
+					"English"
+			],
+			"population": 198410,
+			"flag": "https://flagcdn.com/ws.svg",
+			"region": "Oceania",
+			"area": 2842
+	},
+	{
+			"name": "San Marino",
+			"capital": "City of San Marino",
+			"languages": [
+					"Italian"
+			],
+			"population": 33938,
+			"flag": "https://flagcdn.com/sm.svg",
+			"region": "Europe",
+			"area": 61
+	},
+	{
+			"name": "Sao Tome and Principe",
+			"capital": "São Tomé",
+			"languages": [
+					"Portuguese"
+			],
+			"population": 219161,
+			"flag": "https://flagcdn.com/st.svg",
+			"region": "Africa",
+			"area": 964
+	},
+	{
+			"name": "Saudi Arabia",
+			"capital": "Riyadh",
+			"languages": [
+					"Arabic"
+			],
+			"population": 34813867,
+			"flag": "https://flagcdn.com/sa.svg",
+			"region": "Asia",
+			"area": 2149690
+	},
+	{
+			"name": "Senegal",
+			"capital": "Dakar",
+			"languages": [
+					"French"
+			],
+			"population": 16743930,
+			"flag": "https://flagcdn.com/sn.svg",
+			"region": "Africa",
+			"area": 196722
+	},
+	{
+			"name": "Serbia",
+			"capital": "Belgrade",
+			"languages": [
+					"Serbian"
+			],
+			"population": 6908224,
+			"flag": "https://flagcdn.com/rs.svg",
+			"region": "Europe",
+			"area": 88361
+	},
+	{
+			"name": "Seychelles",
+			"capital": "Victoria",
+			"languages": [
+					"French",
+					"English"
+			],
+			"population": 98462,
+			"flag": "https://flagcdn.com/sc.svg",
+			"region": "Africa",
+			"area": 452
+	},
+	{
+			"name": "Sierra Leone",
+			"capital": "Freetown",
+			"languages": [
+					"English"
+			],
+			"population": 7976985,
+			"flag": "https://flagcdn.com/sl.svg",
+			"region": "Africa",
+			"area": 71740
+	},
+	{
+			"name": "Singapore",
+			"capital": "Singapore",
+			"languages": [
+					"English",
+					"Malay",
+					"Tamil",
+					"Chinese"
+			],
+			"population": 5685807,
+			"flag": "https://flagcdn.com/sg.svg",
+			"region": "Asia",
+			"area": 710
+	},
+	{
+			"name": "Sint Maarten (Dutch part)",
+			"capital": "Philipsburg",
+			"languages": [
+					"Dutch",
+					"English"
+			],
+			"population": 40812,
+			"flag": "https://flagcdn.com/sx.svg",
+			"region": "Americas",
+			"area": 34
+	},
+	{
+			"name": "Slovakia",
+			"capital": "Bratislava",
+			"languages": [
+					"Slovak"
+			],
+			"population": 5458827,
+			"flag": "https://flagcdn.com/sk.svg",
+			"region": "Europe",
+			"area": 49037
+	},
+	{
+			"name": "Slovenia",
+			"capital": "Ljubljana",
+			"languages": [
+					"Slovene"
+			],
+			"population": 2100126,
+			"flag": "https://flagcdn.com/si.svg",
+			"region": "Europe",
+			"area": 20273
+	},
+	{
+			"name": "Solomon Islands",
+			"capital": "Honiara",
+			"languages": [
+					"English"
+			],
+			"population": 686878,
+			"flag": "https://flagcdn.com/sb.svg",
+			"region": "Oceania",
+			"area": 28896
+	},
+	{
+			"name": "Somalia",
+			"capital": "Mogadishu",
+			"languages": [
+					"Somali",
+					"Arabic"
+			],
+			"population": 15893219,
+			"flag": "https://flagcdn.com/so.svg",
+			"region": "Africa",
+			"area": 637657
+	},
+	{
+			"name": "South Africa",
+			"capital": "Pretoria",
+			"languages": [
+					"Afrikaans",
+					"English",
+					"Southern Ndebele",
+					"Southern Sotho",
+					"Swati",
+					"Tswana",
+					"Tsonga",
+					"Venda",
+					"Xhosa",
+					"Zulu"
+			],
+			"population": 59308690,
+			"flag": "https://flagcdn.com/za.svg",
+			"region": "Africa",
+			"area": 1221037
+	},
+	{
+			"name": "South Georgia and the South Sandwich Islands",
+			"capital": "King Edward Point",
+			"languages": [
+					"English"
+			],
+			"population": 30,
+			"flag": "https://flagcdn.com/gs.svg",
+			"region": "Americas"
+	},
+	{
+			"name": "Korea (Republic of)",
+			"capital": "Seoul",
+			"languages": [
+					"Korean"
+			],
+			"population": 51780579,
+			"flag": "https://flagcdn.com/kr.svg",
+			"region": "Asia",
+			"area": 100210
+	},
+	{
+			"name": "Spain",
+			"capital": "Madrid",
+			"languages": [
+					"Spanish"
+			],
+			"population": 47351567,
+			"flag": "https://flagcdn.com/es.svg",
+			"region": "Europe",
+			"area": 505992
+	},
+	{
+			"name": "Sri Lanka",
+			"capital": "Sri Jayawardenepura Kotte",
+			"languages": [
+					"Sinhalese",
+					"Tamil"
+			],
+			"population": 21919000,
+			"flag": "https://flagcdn.com/lk.svg",
+			"region": "Asia",
+			"area": 65610
+	},
+	{
+			"name": "Sudan",
+			"capital": "Khartoum",
+			"languages": [
+					"Arabic",
+					"English"
+			],
+			"population": 43849269,
+			"flag": "https://flagcdn.com/sd.svg",
+			"region": "Africa",
+			"area": 1886068
+	},
+	{
+			"name": "South Sudan",
+			"capital": "Juba",
+			"languages": [
+					"English"
+			],
+			"population": 11193729,
+			"flag": "https://flagcdn.com/ss.svg",
+			"region": "Africa",
+			"area": 619745
+	},
+	{
+			"name": "Suriname",
+			"capital": "Paramaribo",
+			"languages": [
+					"Dutch"
+			],
+			"population": 586634,
+			"flag": "https://flagcdn.com/sr.svg",
+			"region": "Americas",
+			"area": 163820
+	},
+	{
+			"name": "Svalbard and Jan Mayen",
+			"capital": "Longyearbyen",
+			"languages": [
+					"Norwegian"
+			],
+			"population": 2562,
+			"flag": "https://flagcdn.com/sj.svg",
+			"region": "Europe"
+	},
+	{
+			"name": "Swaziland",
+			"capital": "Mbabane",
+			"languages": [
+					"English",
+					"Swati"
+			],
+			"population": 1160164,
+			"flag": "https://flagcdn.com/sz.svg",
+			"region": "Africa",
+			"area": 17364
+	},
+	{
+			"name": "Sweden",
+			"capital": "Stockholm",
+			"languages": [
+					"Swedish"
+			],
+			"population": 10353442,
+			"flag": "https://flagcdn.com/se.svg",
+			"region": "Europe",
+			"area": 450295
+	},
+	{
+			"name": "Switzerland",
+			"capital": "Bern",
+			"languages": [
+					"German",
+					"French",
+					"Italian",
+					"Romansh"
+			],
+			"population": 8636896,
+			"flag": "https://flagcdn.com/ch.svg",
+			"region": "Europe",
+			"area": 41284
+	},
+	{
+			"name": "Syrian Arab Republic",
+			"capital": "Damascus",
+			"languages": [
+					"Arabic"
+			],
+			"population": 17500657,
+			"flag": "https://flagcdn.com/sy.svg",
+			"region": "Asia",
+			"area": 185180
+	},
+	{
+			"name": "Taiwan",
+			"capital": "Taipei",
+			"languages": [
+					"Chinese"
+			],
+			"population": 23503349,
+			"flag": "https://flagcdn.com/tw.svg",
+			"region": "Asia",
+			"area": 36193
+	},
+	{
+			"name": "Tajikistan",
+			"capital": "Dushanbe",
+			"languages": [
+					"Tajik",
+					"Russian"
+			],
+			"population": 9537642,
+			"flag": "https://flagcdn.com/tj.svg",
+			"region": "Asia",
+			"area": 143100
+	},
+	{
+			"name": "Tanzania, United Republic of",
+			"capital": "Dodoma",
+			"languages": [
+					"Swahili",
+					"English"
+			],
+			"population": 59734213,
+			"flag": "https://flagcdn.com/tz.svg",
+			"region": "Africa",
+			"area": 945087
+	},
+	{
+			"name": "Thailand",
+			"capital": "Bangkok",
+			"languages": [
+					"Thai"
+			],
+			"population": 69799978,
+			"flag": "https://flagcdn.com/th.svg",
+			"region": "Asia",
+			"area": 513120
+	},
+	{
+			"name": "Timor-Leste",
+			"capital": "Dili",
+			"languages": [
+					"Portuguese"
+			],
+			"population": 1318442,
+			"flag": "https://flagcdn.com/tl.svg",
+			"region": "Asia",
+			"area": 14874
+	},
+	{
+			"name": "Togo",
+			"capital": "Lomé",
+			"languages": [
+					"French"
+			],
+			"population": 8278737,
+			"flag": "https://flagcdn.com/tg.svg",
+			"region": "Africa",
+			"area": 56785
+	},
+	{
+			"name": "Tokelau",
+			"capital": "Fakaofo",
+			"languages": [
+					"English"
+			],
+			"population": 1411,
+			"flag": "https://flagcdn.com/tk.svg",
+			"region": "Oceania",
+			"area": 12
+	},
+	{
+			"name": "Tonga",
+			"capital": "Nuku'alofa",
+			"languages": [
+					"English",
+					"Tonga (Tonga Islands)"
+			],
+			"population": 105697,
+			"flag": "https://flagcdn.com/to.svg",
+			"region": "Oceania",
+			"area": 747
+	},
+	{
+			"name": "Trinidad and Tobago",
+			"capital": "Port of Spain",
+			"languages": [
+					"English"
+			],
+			"population": 1399491,
+			"flag": "https://flagcdn.com/tt.svg",
+			"region": "Americas",
+			"area": 5130
+	},
+	{
+			"name": "Tunisia",
+			"capital": "Tunis",
+			"languages": [
+					"Arabic"
+			],
+			"population": 11818618,
+			"flag": "https://flagcdn.com/tn.svg",
+			"region": "Africa",
+			"area": 163610
+	},
+	{
+			"name": "Turkey",
+			"capital": "Ankara",
+			"languages": [
+					"Turkish"
+			],
+			"population": 84339067,
+			"flag": "https://flagcdn.com/tr.svg",
+			"region": "Asia",
+			"area": 783562
+	},
+	{
+			"name": "Turkmenistan",
+			"capital": "Ashgabat",
+			"languages": [
+					"Turkmen",
+					"Russian"
+			],
+			"population": 6031187,
+			"flag": "https://flagcdn.com/tm.svg",
+			"region": "Asia",
+			"area": 488100
+	},
+	{
+			"name": "Turks and Caicos Islands",
+			"capital": "Cockburn Town",
+			"languages": [
+					"English"
+			],
+			"population": 38718,
+			"flag": "https://flagcdn.com/tc.svg",
+			"region": "Americas",
+			"area": 948
+	},
+	{
+			"name": "Tuvalu",
+			"capital": "Funafuti",
+			"languages": [
+					"English"
+			],
+			"population": 11792,
+			"flag": "https://flagcdn.com/tv.svg",
+			"region": "Oceania",
+			"area": 26
+	},
+	{
+			"name": "Uganda",
+			"capital": "Kampala",
+			"languages": [
+					"English",
+					"Swahili"
+			],
+			"population": 45741000,
+			"flag": "https://flagcdn.com/ug.svg",
+			"region": "Africa",
+			"area": 241550
+	},
+	{
+			"name": "Ukraine",
+			"capital": "Kyiv",
+			"languages": [
+					"Ukrainian"
+			],
+			"population": 44134693,
+			"flag": "https://flagcdn.com/ua.svg",
+			"region": "Europe",
+			"area": 603700
+	},
+	{
+			"name": "United Arab Emirates",
+			"capital": "Abu Dhabi",
+			"languages": [
+					"Arabic"
+			],
+			"population": 9890400,
+			"flag": "https://flagcdn.com/ae.svg",
+			"region": "Asia",
+			"area": 83600
+	},
+	{
+			"name": "United Kingdom of Great Britain and Northern Ireland",
+			"capital": "London",
+			"languages": [
+					"English"
+			],
+			"population": 67215293,
+			"flag": "https://flagcdn.com/gb.svg",
+			"region": "Europe",
+			"area": 242900
+	},
+	{
+			"name": "United States of America",
+			"capital": "Washington, D.C.",
+			"languages": [
+					"English"
+			],
+			"population": 329484123,
+			"flag": "https://flagcdn.com/us.svg",
+			"region": "Americas",
+			"area": 9629091
+	},
+	{
+			"name": "Uruguay",
+			"capital": "Montevideo",
+			"languages": [
+					"Spanish"
+			],
+			"population": 3473727,
+			"flag": "https://flagcdn.com/uy.svg",
+			"region": "Americas",
+			"area": 181034
+	},
+	{
+			"name": "Uzbekistan",
+			"capital": "Tashkent",
+			"languages": [
+					"Uzbek",
+					"Russian"
+			],
+			"population": 34232050,
+			"flag": "https://flagcdn.com/uz.svg",
+			"region": "Asia",
+			"area": 447400
+	},
+	{
+			"name": "Vanuatu",
+			"capital": "Port Vila",
+			"languages": [
+					"Bislama",
+					"English",
+					"French"
+			],
+			"population": 307150,
+			"flag": "https://flagcdn.com/vu.svg",
+			"region": "Oceania",
+			"area": 12189
+	},
+	{
+			"name": "Venezuela (Bolivarian Republic of)",
+			"capital": "Caracas",
+			"languages": [
+					"Spanish"
+			],
+			"population": 28435943,
+			"flag": "https://flagcdn.com/ve.svg",
+			"region": "Americas",
+			"area": 916445
+	},
+	{
+			"name": "Vietnam",
+			"capital": "Hanoi",
+			"languages": [
+					"Vietnamese"
+			],
+			"population": 97338583,
+			"flag": "https://flagcdn.com/vn.svg",
+			"region": "Asia",
+			"area": 331212
+	},
+	{
+			"name": "Wallis and Futuna",
+			"capital": "Mata-Utu",
+			"languages": [
+					"French"
+			],
+			"population": 11750,
+			"flag": "https://flagcdn.com/wf.svg",
+			"region": "Oceania",
+			"area": 142
+	},
+	{
+			"name": "Western Sahara",
+			"capital": "El Aaiún",
+			"languages": [
+					"Spanish"
+			],
+			"population": 510713,
+			"flag": "https://flagcdn.com/eh.svg",
+			"region": "Africa",
+			"area": 266000
+	},
+	{
+			"name": "Yemen",
+			"capital": "Sana'a",
+			"languages": [
+					"Arabic"
+			],
+			"population": 29825968,
+			"flag": "https://flagcdn.com/ye.svg",
+			"region": "Asia",
+			"area": 527968
+	},
+	{
+			"name": "Zambia",
+			"capital": "Lusaka",
+			"languages": [
+					"English"
+			],
+			"population": 18383956,
+			"flag": "https://flagcdn.com/zm.svg",
+			"region": "Africa",
+			"area": 752618
+	},
+	{
+			"name": "Zimbabwe",
+			"capital": "Harare",
+			"languages": [
+					"English",
+					"Shona",
+					"Northern Ndebele"
+			],
+			"population": 14862927,
+			"flag": "https://flagcdn.com/zw.svg",
+			"region": "Africa",
+			"area": 390757
+	}
+]

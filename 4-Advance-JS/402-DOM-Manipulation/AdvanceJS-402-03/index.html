@@ -4,9 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping List</title>
+    <title>Document</title>
+    <style>
+      .main{
+        margin: 100px 500px;
+        width: 400px;
+        border: 2px solid gray;
+        padding: 150px;
+        box-shadow: 0px 0px 10px black;
+      }
+    </style>
+   
   </head>
   <body>
-    Start your code here
+    <div class="main">
+    <div class="container">
+      <h1>My shopping list</h1>
+      <label for="things">Enter a new item: </label>
+      <input
+        type="text"
+        id="id"
+        class="things"
+        name="things"
+        placeholder="Enter the Things"
+      />
+      <button id="addItem">Add item</button>
+    </div>
+
+    <div >
+      <ul id="ul">
+       
+      </ul>
+    </div>
+  </div>
+  <script>
+    document.getElementById("addItem").addEventListener("click", getData);
+
+function getData() {
+  let inputref = document.getElementById("id");
+  let unOrList = document.getElementById("ul");
+  unOrList.innerHTML += ` <li>
+  ${inputref.value}
+  <button onclick="deleteData(this)">Delete</button>
+</li>`;
+  inputref.value = "";
+  inputref.focus();
+}
+
+function deleteData(e) {
+  e.parentElement.remove();
+}
+  </script>
+    
   </body>
 </html>
