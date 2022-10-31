@@ -1,1 +1,22 @@
-/* start your styling here  */
+.main{
+    margin: 100px 600px;
+}
+span{
+    margin-right: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: initial;
+    font-family: Arial, Helvetica, sans-serif;
+}
+select{
+background-color: orange;
+padding: 20px;
+margin: 10px auto;
+}
+select:hover {
+background-color: red;
+
+}
+option{
+background-color: beige;
+}
