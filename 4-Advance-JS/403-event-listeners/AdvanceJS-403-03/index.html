@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+   
+  
+   <style>
+    body {
+    
+      background-image: url(https://media.istockphoto.com/photos/luxury-breakfast-food-on-wooden-table-picture-id1001294906?k=20&m=1001294906&s=612x612&w=0&h=CMkldVCd7JNKQrEGMeQ8sYKzjSGWaUnyX8n5MCs6HcM=);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .main{
+      margin: 100px 300px;
+      
+      
+    }
+    .same{
+      margin: 0px 300px;
+      background-color: whitesmoke;
+      
+    }
+    .content{
+      margin-top: 20px;
+      
+    }
+   </style>
+   
+</head>
+<body>
+   <div class="main">
+    <div class="container">
+
+       
+        
+        <div class="calculator same" id="calculator">
+         
+        <div style="margin: 50px;" id="form">
+          <h2 style="margin:50px 0px ; color: brown;">Tip Calculator</h2>
+        <h3 style="color: brown;">How much was your bill?</h3>
+        
+        <input style="color: brown; padding: 10px;" id="billAmt" type="text" placeholder="Bill Amount">
+        
+        <h3><p style="color: brown;"> How was the service?</p>
+        
+        <select style="padding: 10px;" id="servicequality">
+        
+        <option style="color: brown; padding: 10px;">Choose One </option>
+        
+        <option style="color: brown;" value="0.0">0%-Average</option>
+        
+        <option style="color: brown;" value="0.1">10%-Good</option>
+        
+        <option style="color: brown;" value="0.2">20%-Excellent</option>
+        
+        </select></h3>
+        <h4 style="color: brown;">total member are billing</h4><br />
+        <input style="color: brown; padding: 7px;" type="number" name="" value="" id="nothing">
+        <br>
+        <button style="margin: 20px -10px; padding: 10px; border-radius: 2px; width: 200px; background-color: brown; color: white;" type="button" id="calculate">Calculate!</button>
+        
+        </div>
+        
+        <div style="margin-left: 50px" id="totaltip">
+        
+        <h3 style="color: brown;">Tip Total:-
+        
+        <span id=tipTotal></span></h3>
+        
+        <h3 style="color: brown;">Bill Total:-
+        
+        <span id=billTotal></span></h3>
+        
+        </div>
+      </div>
+       <script
+       >
+    function calculateTip() {
+  
+    var billAmt = document.getElementById("billAmt").value;
+  
+    var servicequality = document.getElementById("servicequality").value;
+  
+    var tipTotal = document.getElementById("tipTotal").value;
+  
+    var person= document.getElementById("nothing").value;
+  
+    var total = billAmt * servicequality / person; 
+  
+    document.getElementById("tipTotal").innerHTML = total;
+  }
+  document.getElementById("calculate").onclick = function () {
+    calculateTip();
+  };</script>
+</body>
 </html>
