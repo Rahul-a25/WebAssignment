@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+   <style>
+      
+   </style>
+     
     <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+</head>
+<body>
+     <h1 class="text-center text-black"> Validating Web Forms</h1>
+     <div class="container">
+        <form id="submit">
+            <div class="form-group">
+                <label >
+                    First name
+                </label>
+                <br>
+                <input type="text" name="" id="first_name" class="form-control">
+                <span id="firsterror" class="text-warning fw-bold"></span>
+            </div>
+            <div class="form-group">
+                <label >
+                    last name
+                </label>
+                <br>
+                <input type="text" name="" id="last_name" class="form-control">
+                <span id="lasterror" class="text-warning fw-bold"></span>
+            </div>
+             <div class="form-group">
+                <label >
+                   email
+                </label>
+                <br>
+                <input type="text" name="" id="email" class="form-control">
+                <span id="emailerror" class="text-warning fw-bold"></span>
+            </div>
+             <div class="form-group">
+                <label >
+                    password
+                </label>
+                <br>
+                <input type="password" name="" id="password" class="form-control">
+                <span id="passerror" class="text-warning fw-bold"></span>
+            </div>
+             <div class="form-group">
+                <label >
+                   telephone
+                </label>
+                <br>
+                <input type="text" name="" id="telephone" class="form-control">
+                <span id="telephoneerror" class="text-warning fw-bold"></span>
+            </div>
+            <br> <div class="form-group">
+              <label >
+                 Bio
+              </label>
+              <br>
+              <input type="text" name="" id="Bio" class="form-control">
+              <span id="bioerror" class="text-warning fw-bold"></span>
+          </div>
+            <br>
+            <input style="background-color: rgb(75, 202, 136); color: white; width: 150px; padding: 10px;" type="submit" name="" class="btn btn-primary" >
+        </form>
+     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <script>
+      function validation(e){
+    e.preventDefault();
+    var first_name=document.getElementById('first_name').value;
+    var last_name = document.getElementById("last_name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var telephone = document.getElementById("telephone").value;
+    var biowala= document.getElementById("Bio").value; 
+    
+    var first_namecheck=/^[0-9A-Za-z. ]{3,16}$/;
+    var last_namecheck = /^[A-Za-z. ]{3,30}$/;
+    var passwordcheck = /^(?=.*d)(?=.*[a-zA-Z]).{3,20}$/;
+    var emailcheck = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+    var telephonecheck =
+      /^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}|(\d[ -]?){10}\d$/;
+    var biowalapart= /^[0-9A-Za-z. ]{8,50}$/; 
+
+    if(first_namecheck.test(first_name)){
+        document.getElementById('firsterror').innerHTML ="";
+        document.getElementById('first_name').style.border="2px solid rgb(75, 202, 136)";
+    }
+    else {
+        document.getElementById('firsterror').innerHTML ="First name must be alphanumeric and contain 3-16 characters ";
+    }
+      if (last_namecheck.test(last_name)) {
+        document.getElementById("lasterror").innerHTML = "";
+        document.getElementById('last_name').style.border="2px solid rgb(75, 202, 136)";
+      } else {
+        document.getElementById("lasterror").innerHTML =
+          "Last name must be alphanumeric and contain 3-16 characters";
+      }
+       if (emailcheck.test(email)) {
+         document.getElementById("emailerror").innerHTML = "";
+         document.getElementById('email').style.border="2px solid rgb(75, 202, 136)";
+       } else {
+         document.getElementById("emailerror").innerHTML =
+           "Eamil must be a valid address , eg. example @example.com";
+       }
+       if (passwordcheck.test(password)) {
+         document.getElementById("passerror").innerHTML = "";
+         document.getElementById('last_name').style.border="2px solid rgb(75, 202, 136)";
+       } else {
+         document.getElementById("passerror").innerHTML = "Password must be alphanumeric ( @,_and -are also allowed )and between 6-20 character";
+       }
+       if(telephonecheck.test(telephone)){
+        document.getElementById("telephoneerror").innerHTML="";
+        document.getElementById('telephone').style.border="2px solid rgb(75, 202, 136)";
+       }
+       else {
+        document.getElementById("telephoneerror").innerHTML = "A valid Telephone number (11 digits and 333 -333-3334) ";
+       }
+       if(biowalapart.test(biowala)){
+        document.getElementById("bioerror").innerHTML="";
+        document.getElementById('biowala').style.border="2px solid rgb(75, 202, 136)";
+       }
+       else {
+        document.getElementById("bioerror").innerHTML = "Bio must contain only lowercaseletters, underscores,hyphens and be 8-50 characters ";
+       }
+       
+}
+
+
+
+document.getElementById("submit").addEventListener("keyup",validation);
+    </script>
+</body>
 </html>
