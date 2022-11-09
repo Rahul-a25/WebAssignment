@@ -4,9 +4,129 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>DOcument</title>
+    <style>
+      .form,h5{
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+#Profile{
+    display: flex;
+    margin: 30px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    margin-top: 15px;
+
+  }
+.img img{
+    width: 120px;
+    border-radius: 50%;
+  }
+.link-name{
+    margin: 10px;
+  }
+h5{
+    margin: 10px 120px;
+    font-size: xx-large;
+  }
+form{
+    margin: 1px 120px;
+  }
+input{
+    width: 320px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: x-large;
+    border: 2px solid black;
+    outline: none;
+    border: 2px solid #c3144f;
+    border-radius: 7px;
+
+  }
+  input#search{
+    font-size: 20px;
+
+  }
+button#submit{
+    margin: 0px 1px;
+    padding: 7px 1px;
+  font-size: large;
+  background-color: black;
+  background-color: rgb(5, 86, 97);
+  color: white;
+  border: 2px solid white;
+  }
+ button{
+    width: 100px;
+    height: 39px;
+    border-radius: 5px;
+}
+    </style>
   </head>
-  <body>
-    Start your code here
+    <body style=" background-color: black;
+    color: white; margin:30px 100px">
+    <h5>Let's stack someone on Github</h5>
+   <div class="form" >
+    <form action="">
+      <input type="text" id="search" placeholder="search here">
+      <button id="submit">submit</button>
+    </form>
+   </div>
+   <div id="Profile">
+    <div class="img">
+      <img  src="" alt="">
+    </div>
+   <div class="link-name">
+    <h4 ></h4>
+    <a href="" target="_blank"></a>
+   </div>
+    
+   </div>
+   <script>
+    var form=document.querySelector("form");
+var search=document.getElementById("search");
+
+var profile=document.getElementById("Profile");
+
+
+let getGithubId= async(name)=>{
+    const url=`https://api.github.com/users/${name}`;
+    const response= await fetch (url);
+    const data=await response.json();
+    console.log(data);
+    showProfile(data)
+
+    
+}
+var showProfile= (data)=>{
+    if(data.message=="Not Found"){
+        profile.innerHTML=`<h2>Oops! Data not find</h2>`
+        return;
+}
+   profile.innerHTML= `<div id="Profile">
+    <div class="img">
+      <img  src="${data.avatar_url}" alt="ing">
+    </div>
+   <div class="link-name">
+    <h4 >${data.name}</h4>
+    <a href="${data.html_url}" target="_blank">${data.html_url}</a>
+   </div>`
+   var search=document.getElementById("search")
+   search.value=""
+}
+
+
+form.addEventListener("submit",function(event){
+  console.log(search.value);
+  console.log("hhh");
+  getGithubId(search.value)
+ 
+  event.preventDefault();
+})
+   </script>
   </body>
 </html>
