@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="407-01.css">
     <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+    <style>
+      body{
+        background-color: black;
+      }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 style="color: white;">
+        Emojee- Emoji 🔍 Application
+    </h1>
+    <hr style="border: 2px solid white;">
+    <form id="search-form" style="margin-top: 10px;">
+        <input style="margin-top: 10px;" type="text" placeholder="emoji search" id="search-field">
+        <input type="submit" value="search">
+    </form>
+    <table id="search_result_container">
+        
+    </table>
+</div>
+<script src="EmojiList.js"></script>
+<script >
+  const autosearch = (e) =>{
+    const value=e.target.value;
+    displaySearchResults(value);
+} 
+const displaySearchResults=(searchQuery="")=>{
+    const filter=emojiList.filter(e=>{
+        if(e.description.indexOf(searchQuery)!==-1){
+            return true;
+        }
+        if(e.aliases.some(elem=>elem.startsWith(searchQuery))){
+            return true;
+        }
+
+    })
+    const parent = document.getElementById("search_result_container");
+    parent.innerHTML="";
+    filter.forEach((e)=>{
+        const new_row=document.createElement("tr");
+        // document.getElement("tr").style.border="2px solid white";
+        const new_emoji=document.createElement("td");
+        document.create.Element("td").style.border="2px solid white";
+        const new_aliases=document.createElement("td");
+        const new_desc=document.createElement("td");
+        new_emoji.innerHTML=e.emoji;
+        new_aliases.innerHTML=e.aliases.join(",");
+        new_desc.innerHTML=e.description;
+
+        new_row.appendChild(new_emoji);
+        new_row.appendChild(new_aliases);
+        new_row.appendChild(new_desc);
+        parent.appendChild(new_row);
+    })
+}
+
+
+document.getElementById("search-form").addEventListener("keyup",autosearch);
+
+displaySearchResults();
+</script>
+</body>
 </html>
