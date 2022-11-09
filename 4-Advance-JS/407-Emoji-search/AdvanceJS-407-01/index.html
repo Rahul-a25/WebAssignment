@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="407-01.css">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>advance 407-01 Assignment</title>
     <style>
-      body{
-        background-color: black;
-      }
+        .container{
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+
+body{
+    /* background-color:var(--black); */
+    background-color: black;
+    color:var(--white);
+}
+#search_result_container{
+    font-size: xx-large;
+    font-family: monospace;
+}
+input#search-field{
+    width: 210px;
+    height: 20px;
+}
+input#hh{
+    height: 27px;
+}
+:root{
+    --black:#c4e5eb;
+    --white:white;
+    /* --white:#131111; */
+}
     </style>
-</head>
-<body>
-<div class="container">
-    <h1 style="color: white;">
-        Emojee- Emoji 🔍 Application
-    </h1>
-    <hr style="border: 2px solid white;">
-    <form id="search-form" style="margin-top: 10px;">
-        <input style="margin-top: 10px;" type="text" placeholder="emoji search" id="search-field">
-        <input type="submit" value="search">
-    </form>
-    <table id="search_result_container">
-        
-    </table>
-</div>
-<script src="EmojiList.js"></script>
-<script >
-  const autosearch = (e) =>{
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="font-size:50px ; color: white;">
+        Emoji-Emoji 🔍 Application
+      </h1>
+      <form id="search-form" style="margin: 20px;">
+          <input type="text" placeholder="emoji search" id="search-field">
+          <input id="hh" type="submit" value="search">
+      </form>
+      <table id="search_result_container" rules="rows">
+          
+      </table>
+  </div>
+  <script src="./emojiList.js"></script>
+  <script >
+    const autosearch = (e) =>{
     const value=e.target.value;
     displaySearchResults(value);
 } 
@@ -46,9 +68,7 @@ const displaySearchResults=(searchQuery="")=>{
     parent.innerHTML="";
     filter.forEach((e)=>{
         const new_row=document.createElement("tr");
-        // document.getElement("tr").style.border="2px solid white";
         const new_emoji=document.createElement("td");
-        document.create.Element("td").style.border="2px solid white";
         const new_aliases=document.createElement("td");
         const new_desc=document.createElement("td");
         new_emoji.innerHTML=e.emoji;
@@ -66,6 +86,6 @@ const displaySearchResults=(searchQuery="")=>{
 document.getElementById("search-form").addEventListener("keyup",autosearch);
 
 displaySearchResults();
-</script>
-</body>
+  </script>
+  </body>
 </html>
