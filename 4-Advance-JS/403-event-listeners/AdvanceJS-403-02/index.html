@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="403-02.css">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance 403-02 Assignment</title>
+    <link rel="stylesheet" href="style.css" />
     <style>
       button{
     border:2px solid blue;
     height: 6rem;
     width: 5rem;
+    cursor: pointer;
 }
 .set{
     border :2px solid black;
@@ -19,61 +20,64 @@
     align-items: center;
     justify-content: center;
     background-color: blue;
+    
 }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="set">
-     <button class="w drum">w</button>
-     <button class="a drum">a</button>
-     <button class="s drum">s</button>
-     <button class="d drum">d</button>
-     <button class="j drum">j</button>
-     <button class="k drum">k</button>
-     <button class="l drum">l</button>
-    </div>
-<script src>for(var i=0;i<document.querySelectorAll('.drum').length;i++){ 
-  document.getElementsByClassName('drum')[i].addEventListener('click',function(){
-    var buttontext=this.innerHTML;
-    console.log("key has been clicked");
-    // console.log(buttontext);
-    makesound(buttontext);
-  })
-}
-  document.addEventListener("keypress",function(e){
-    console.log("key has been pressed")
-    // console.log(e.key);
-    makesound(e.key);
-  })
-  function makesound(buttontext){
-    if(buttontext=='w'){
-        var tom1=new Audio("sounds/tom-1.mp3");
-        tom1.play();
+      <button class="w drum">w</button>
+      <button class="a drum">a</button>
+      <button class="s drum">s</button>
+      <button class="d drum">d</button>
+      <button class="j drum">j</button>
+      <button class="k drum">k</button>
+      <button class="l drum">l</button>
+     </div>
+ <script >
+  for(var i=0;i<document.querySelectorAll('.drum').length;i++){ 
+    document.getElementsByClassName('drum')[i].addEventListener('click',function(){
+      var buttontext=this.innerHTML;
+      console.log("key has been clicked");
+      // console.log(buttontext);
+      makesound(buttontext);
+    })
+  }
+    document.addEventListener("keypress",function(e){
+      console.log("key has been pressed")
+      // console.log(e.key);
+      makesound(e.key);
+    })
+    function makesound(buttontext){
+      if(buttontext=='w'){
+          var tom1=new Audio("sounds/tom-1.mp3");
+          tom1.play();
+      }
+      if (buttontext == "a") {
+        var tom2 = new Audio("sounds/tom-2.mp3");
+        tom2.play();
+      }
+      if (buttontext == "s") {
+        var tom3 = new Audio("sounds/tom-3.mp3");
+        tom3.play();
+      }
+      if (buttontext == "d") {
+        var tom4 = new Audio("sounds/tom-4.mp3");
+        tom4.play();
+      }
+      if (buttontext == "j") {
+        var snare = new Audio("sounds/snare.mp3");
+        snare.play();
+      }
+      if (buttontext == "k") {
+        var kick = new Audio("sounds/kick-bass.mp3");
+        kick.play();
+      }
+      if (buttontext == "l") {
+        var crash = new Audio("sounds/crash.mp3");
+        crash.play();
+      }
     }
-    if (buttontext == "a") {
-      var tom2 = new Audio("sounds/tom-2.mp3");
-      tom2.play();
-    }
-    if (buttontext == "s") {
-      var tom3 = new Audio("sounds/tom-3.mp3");
-      tom3.play();
-    }
-    if (buttontext == "d") {
-      var tom4 = new Audio("sounds/tom-4.mp3");
-      tom4.play();
-    }
-    if (buttontext == "j") {
-      var snare = new Audio("sounds/snare.mp3");
-      snare.play();
-    }
-    if (buttontext == "k") {
-      var kick = new Audio("sounds/kick-bass.mp3");
-      kick.play();
-    }
-    if (buttontext == "l") {
-      var crash = new Audio("sounds/crash.mp3");
-      crash.play();
-    }
-  }</script>
-</body>
+ </script>
+  </body>
 </html>
