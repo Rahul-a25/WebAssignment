@@ -9,15 +9,15 @@
   </head>
   <body>
     <div class="container">
-      <h1 style="background-color: red;" >Meal Finder</h1>
-      <p >Find the perfect meal to dine upon</p>
+      <h1>Meal Finder</h1>
+      <p>Find the perfect meal to dine upon</p>
       <input type="text" name="meal" id="meal" class="meal" />
 
       <div id="images"></div>
     </div>
 
-    <script >
-        document.getElementById("meal").addEventListener("keyup", renderData);
+    <script>
+         document.getElementById("meal").addEventListener("keyup", renderData);
 
 function renderData(e) {
   fetch(
